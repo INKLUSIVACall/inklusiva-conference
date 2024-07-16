@@ -1,0 +1,69 @@
+/*
+Error: Undefined mixin 'setFlexDirection'.
+        on line 12 of style.scss, in `setFlexDirection'
+        from line 12 of style.scss
+
+7:   justify-content: stretch;
+8:   align-items: stretch;
+9:   z-index: 1;
+10: 
+11:   // flex-direction attributes
+12:   @include setFlexDirection($flex-direction-xl: $layout_All_Layouts_Flex_Direction_XL, $flex-direction-lg: $layout_All_Layouts_Flex_Direction_LG, $flex-direction-md: $layout_All_Layouts_Flex_Direction_MD, $flex-direction-sm: $layout_All_Layouts_Flex_Direction_SM, $flex-direction-xs: $layout_All_Layouts_Flex_Direction_XS);
+13: 
+14:   // height, min- and max-height attributes
+15:   @include setHeight($height-xl: $layout_All_Layouts_Height_XL, $height-lg: $layout_All_Layouts_Height_LG, $height-md: $layout_All_Layouts_Height_MD, $height-sm: $layout_All_Layouts_Height_SM, $height-xs: $layout_All_Layouts_Height_XS);
+16:   @include setMaxHeight($max-height-xl: $layout_All_Layouts_MaxHeight_XL, $max-height-lg: $layout_All_Layouts_MaxHeight_LG, $max-height-md: $layout_All_Layouts_MaxHeight_MD, $max-height-sm: $layout_All_Layouts_MaxHeight_SM, $max-height-xs: $layout_All_Layouts_MaxHeight_XS);
+17:   @include setMinHeight($min-height-xl: $layout_All_Layouts_MinHeight_XL, $min-height-lg: $layout_All_Layouts_MinHeight_LG, $min-height-md: $layout_All_Layouts_MinHeight_MD, $min-height-sm: $layout_All_Layouts_MinHeight_SM, $min-height-xs: $layout_All_Layouts_MinHeight_XS);
+
+Backtrace:
+style.scss:12:in `setFlexDirection'
+style.scss:12
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `block in with_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `with_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'setFlexDirection'.\A         on line 12 of style.scss, in `setFlexDirection'\A         from line 12 of style.scss\A \A 7:   justify-content: stretch;\A 8:   align-items: stretch;\A 9:   z-index: 1;\A 10: \A 11:   // flex-direction attributes\A 12:   @include setFlexDirection($flex-direction-xl: $layout_All_Layouts_Flex_Direction_XL, $flex-direction-lg: $layout_All_Layouts_Flex_Direction_LG, $flex-direction-md: $layout_All_Layouts_Flex_Direction_MD, $flex-direction-sm: $layout_All_Layouts_Flex_Direction_SM, $flex-direction-xs: $layout_All_Layouts_Flex_Direction_XS);\A 13: \A 14:   // height, min- and max-height attributes\A 15:   @include setHeight($height-xl: $layout_All_Layouts_Height_XL, $height-lg: $layout_All_Layouts_Height_LG, $height-md: $layout_All_Layouts_Height_MD, $height-sm: $layout_All_Layouts_Height_SM, $height-xs: $layout_All_Layouts_Height_XS);\A 16:   @include setMaxHeight($max-height-xl: $layout_All_Layouts_MaxHeight_XL, $max-height-lg: $layout_All_Layouts_MaxHeight_LG, $max-height-md: $layout_All_Layouts_MaxHeight_MD, $max-height-sm: $layout_All_Layouts_MaxHeight_SM, $max-height-xs: $layout_All_Layouts_MaxHeight_XS);\A 17:   @include setMinHeight($min-height-xl: $layout_All_Layouts_MinHeight_XL, $min-height-lg: $layout_All_Layouts_MinHeight_LG, $min-height-md: $layout_All_Layouts_MinHeight_MD, $min-height-sm: $layout_All_Layouts_MinHeight_SM, $min-height-xs: $layout_All_Layouts_MinHeight_XS);"; }

@@ -1,0 +1,161 @@
+//
+// mixins root
+//
+
+// set font size root
+@mixin fontSizeRoot() {
+    font-size: $fontSize-HTML-XS;
+
+    @include media-breakpoint-up(sm) {
+        font-size: $fontSize-HTML-SM;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: $fontSize-HTML-MD;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: $fontSize-HTML-LG;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: $fontSize-HTML-XL;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: $fontSize-HTML-XXL;
+    }
+}
+
+//
+// mixins font format
+//
+
+// set font family by type
+@mixin setfontFamily($type: medium) {
+    @if $type == book {
+        font-family: $fontFamily-Book;
+        font-weight: $fontWeight-Book;
+        font-style: normal;
+    }
+
+    @if $type == medium {
+        font-family: $fontFamily-Medium;
+        font-weight: $fontWeight-Medium;
+        font-style: normal;
+    }
+
+    @if $type == bold {
+        font-family: $fontFamily-Bold;
+        font-weight: $fontWeight-Bold;
+        font-style: normal;
+    }
+}
+
+// font attributes
+@mixin setfontAttributes($textDecoration: none, $textTransform: none, $letterSpacing: normal) {
+    text-decoration: $textDecoration;
+    text-transform: $textTransform;
+    letter-spacing: $letterSpacing;
+}
+
+@mixin setFontSizeByType($type: content-default) {
+    @if $type == content-default {
+        @include setFontSizeResponsive(
+            $font-size-xxl: $fontSize-003,
+            $font-size-xl: $fontSize-003,
+            $font-size-lg: $fontSize-003,
+            $font-size-md: $fontSize-002,
+            $font-size-sm: $fontSize-002,
+            $font-size-xs: $fontSize-002
+        );
+
+        @include setLineHeightResponsive(
+            $font-size-xxl: $fontSize-003,
+            $font-size-xl: $fontSize-003,
+            $font-size-lg: $fontSize-003,
+            $font-size-md: $fontSize-002,
+            $font-size-sm: $fontSize-002,
+            $font-size-xs: $fontSize-002,
+            $line-height-multiplikator: $line-height-multiplikator-default
+        );
+    }
+}
+
+@mixin setIcon($type: medium) {
+}
+
+
+// set font size
+@mixin setFontSize($font-size: $fontSize-003) {
+    font-size: $font-size;
+}
+
+// set font size Responsive
+@mixin setFontSizeResponsive(
+    $font-size-xxl: $fontSize-003,
+    $font-size-xl: $fontSize-003,
+    $font-size-lg: $fontSize-003,
+    $font-size-md: $fontSize-002,
+    $font-size-sm: $fontSize-002,
+    $font-size-xs: $fontSize-002
+) {
+    font-size: $font-size-xs;
+
+    @include media-breakpoint-up(sm) {
+        font-size: $font-size-sm;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-md;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-lg;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: $font-size-xl;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: $font-size-xxl;
+    }
+}
+
+// set line-height
+@mixin setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-default) {
+    line-height: calc(#{$font-size} * #{$line-height-multiplikator});
+}
+
+// set line-height Responsive
+@mixin setLineHeightResponsive(
+    $font-size-xxl: $fontSize-003,
+    $font-size-xl: $fontSize-003,
+    $font-size-lg: $fontSize-003,
+    $font-size-md: $fontSize-002,
+    $font-size-sm: $fontSize-002,
+    $font-size-xs: $fontSize-002,
+    $line-height-multiplikator: $line-height-multiplikator-default
+) {
+    line-height: calc(#{$font-size-xs} * #{$line-height-multiplikator});
+
+    @include media-breakpoint-up(sm) {
+        line-height: calc(#{$font-size-sm} * #{$line-height-multiplikator});
+    }
+
+    @include media-breakpoint-up(md) {
+        line-height: calc(#{$font-size-md} * #{$line-height-multiplikator});
+    }
+
+    @include media-breakpoint-up(lg) {
+        line-height: calc(#{$font-size-lg} * #{$line-height-multiplikator});
+    }
+
+    @include media-breakpoint-up(xl) {
+        line-height: calc(#{$font-size-xl} * #{$line-height-multiplikator});
+    }
+
+    @include media-breakpoint-up(xxl) {
+        line-height: calc(#{$font-size-xxl} * #{$line-height-multiplikator});
+    }
+}

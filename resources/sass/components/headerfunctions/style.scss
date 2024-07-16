@@ -1,0 +1,271 @@
+.header-functions {
+  padding: 0px 0px;
+  background: transparent;
+  height: auto;
+  min-height: 40px;
+  width: auto;
+  @include rounded(8px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  .title {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+    color: var(--color-functionality-title);
+
+    i {
+      color: inherit;
+      font-size: 1.125rem;
+      line-height: 1.125rem;
+      flex: 0 1 auto;
+    }
+
+    span {
+      color: inherit;
+      position: relative;
+      @include setfontFamily($type: regular);
+      @include setFontSize($font-size: $fontSize-001);
+      @include setLineHeight($font-size: $fontSize-001, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+      margin-left: 8px;
+    }
+  }
+
+  .values {
+    padding: 8px 0px;
+    flex: 1 1 auto;
+
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0px;
+      padding: 0px;
+      line-height: $fontSize-001;
+
+      li {
+        margin-left: 8px;
+
+        &:first-of-type {
+          margin-left: 0px;
+        }
+
+        a {
+          text-transform: none;
+          text-decoration: none;
+          hyphens: auto;
+          @include setfontFamily($type: semibold);
+          @include setFontSize($font-size: $fontSize-001);
+          @include setLineHeight($font-size: $fontSize-001, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+          color: var(--color-functionality-values);
+          @include focuseffect();
+
+          span {
+            position: relative;
+            display: inline-block;
+
+            &:after {
+              position: absolute;
+              left: 0px;
+              bottom: -1px;
+              width: 0%;
+              height: 2px;
+              content: '';
+              background-color: var(--color-functionality-values);
+              @include anim($time: 120ms);
+            }
+          }
+        }
+
+        &.active {
+          a {
+            span {
+              &:after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.overlay-navigation {
+  .header-functions {
+    background-color: var(--color-body-background);
+    width: 100%;
+    padding: 8px 12px;
+    min-height: 60px;
+
+    .title {
+      color: var(--color-functionality-overlay-title);
+      flex: 0 0 150px;
+
+      i {
+        font-size: $iconSize-005;
+        line-height: $iconSize-005;
+      }
+
+      span {
+        @include setFontSize($font-size: $fontSize-002);
+        @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+        margin-left: 12px;
+      }
+    }
+
+    .values {
+      ul {
+        li {
+          &:first-of-type {
+          }
+
+          &:last-of-type {
+          }
+
+          a {
+            color: var(--color-functionality-overlay-values);
+            @include setFontSize($font-size: $fontSize-002);
+            @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+
+            span {
+              &:after {
+                background-color: var(--color-functionality-overlay-values);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .color-scheme {
+    .values {
+      ul {
+        li {
+          &.link-dark {
+            a {
+              span {
+                &:after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+
+          &.link-bright {
+            a {
+              span {
+                &:after {
+                  width: 0%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .colorscheme-individual-light {
+    .color-scheme {
+      .values {
+        ul {
+          li {
+            &.link-dark {
+              a {
+                span {
+                  &:after {
+                    width: 0%;
+                  }
+                }
+              }
+            }
+
+
+            &.link-bright {
+              a {
+                span {
+                  &:after {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  .color-scheme {
+    .values {
+      ul {
+        li {
+          &.link-dark {
+            a {
+              span {
+                &:after {
+                  width: 0%;
+                }
+              }
+            }
+          }
+
+          &.link-bright {
+            a {
+              span {
+                &:after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .colorscheme-individual-dark {
+    .color-scheme {
+      .values {
+        ul {
+          li {
+            &.link-dark {
+              a {
+                span {
+                  &:after {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+
+            &.link-bright {
+              a {
+                span {
+                  &:after {
+                    width: 0%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

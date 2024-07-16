@@ -1,0 +1,44 @@
+//
+//  mixins
+//
+@mixin setBurgerMenue($colorBackground: $colorText, $open:false) {
+    &:after, &:before, span {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        width: 100%;
+        left: 0px;
+        top: 50%;
+        @include rotate(0deg);
+        @include rounded(2px);
+        @include transparent(1);
+        @include anim($time: 80ms);
+        background: $colorBackground;
+        height: 4px;
+    }
+
+    &:before {
+        top: calc(50% + 10px);
+    }
+
+    &:after {
+        top: calc(50% - 10px);
+    }
+
+    @if $open==true {
+        &:after, &:before, span {
+        }
+
+        &:after, &:before {
+            @include transparent(0);
+        }
+
+        span:first-of-type {
+            @include rotate(45deg);
+        }
+
+        span:last-of-type {
+            @include rotate(-45deg);
+        }
+    }
+}

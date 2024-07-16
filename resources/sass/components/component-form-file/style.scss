@@ -1,0 +1,17 @@
+//
+// style
+//
+.form-file {
+    margin-top: 100px;
+
+    input[type="file"]{
+        @include setfontFamily($type: book);
+        @include setFontSize($font-size: $fontSize-003);
+        @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+    }
+}
+
+@include media-breakpoint-down(md) {
+}
+
+

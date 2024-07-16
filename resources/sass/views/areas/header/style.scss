@@ -1,0 +1,35 @@
+//
+// style
+//
+[data-area-type="header"] {
+    overflow: inherit;
+    flex: 0 0 auto;
+    align-items: center;
+    z-index: 2;
+    padding: 20px 0px;
+
+    [data-type="area-wrapper"] {
+        header {
+        }
+    }
+}
+
+[data-view-type="wizard"] {
+    [data-area-type="header"] {
+        background-color: $colorWhite;
+        @include setMinHeight($min-height-xxl: $area_Header_Height_XXL, $min-height-xl: $area_Header_Height_XL, $min-height-lg: $area_Header_Height_LG, $min-height-md: $area_Header_Height_MD, $min-height-sm: $area_Header_Height_SM, $min-height-xs: $area_Header_Height_XS);
+    }
+}
+
+[data-view-type="backend"] {
+    [data-area-type="header"] {
+        background-color: transparent;
+        @include setMinHeight($min-height-xxl: $area_Header_backend_Height_XXL, $min-height-xl: $area_Header_backend_Height_XL, $min-height-lg: $area_Header_backend_Height_LG, $min-height-md: $area_Header_backend_Height_MD, $min-height-sm: $area_Header_backend_Height_SM, $min-height-xs: $area_Header_backend_Height_XS);
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    [data-area-type="header"] {
+        padding: 0px;
+    }
+}

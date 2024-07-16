@@ -1,0 +1,6 @@
+//
+// style
+//
+.context {
+  @include setPadding($padding-xxl: $component_Context_Padding_XXL, $padding-xl: $component_Context_Padding_XL, $padding-lg: $component_Context_Padding_LG, $padding-md: $component_Context_Padding_MD, $padding-sm: $component_Context_Padding_SM, $padding-xs: $component_Context_Padding_XS);
+}

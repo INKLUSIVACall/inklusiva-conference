@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'progressbox.title'                     => 'Einstellungen zu Sehen',
+    'descbox.format'                        => 'h1',
+    'descbox.ariaLabel'                     => 'Einstellungen zu Sehen',
+    'descbox.helpLink'                      => 'javascript:void(0)',
+    'descbox.title'                         => 'Einstellungen zu Sehen',
+    'descbox.desc'                          => 'Auf dieser Seite können Sie Einstellungen für die Darstellung des Meetings und der Videos festlegen.',
+    'whitebox1.format'                      => 'h2',
+    'whitebox1.ariaLabel'                   => 'Einstellungen zu Schrift, Icons und Hinweisen',
+    'whitebox1.title'                       => 'Einstellungen zu Schrift, Icons und Hinweisen',
+    'ui.fontSize.label'                     => 'Schriftgröße im Meeting',
+    'ui.iconSize.label'                     => 'Größe von Icons im Meeting',
+    'ui.visualCues.label'                   => 'Sichtbare Hinweise',
+    'ui.visualCues.description'             => 'Schalten Sie diese Funktion an, um während des Meetings sichtbare Hinweise und Meldungen zu bekommen.',
+    'whitebox2.format'                      => 'h2',
+    'whitebox2.title'                       => 'Darstellung der Videos der anderen Teilnehmer*innen',
+    'whitebox2.ariaLabel'                   => 'Darstellung der Videos der anderen Teilnehmer*innen',
+    'video_otherParticipants.label'         => 'Videos der Teilnehmenden',
+    'video_otherParticipants.description'   => 'Schalten Sie diese Funktion an, um die Videos der Teilnehmenden anzuzeigen. Sie werden als Kacheln dargestellt. Wenn Sie diesen Schalter ausschalten, sehen Sie die Videos der Teilnehmenden nicht.',
+    'contrast.label'                        => 'Kontrast der Videos',
+    'brightness.label'                      => 'Helligkeit der Videos',
+    'dimming.label'                         => 'Videos dimmen / dunkler machen',
+    'saturation.label'                      => 'Farb-Sättigung der Videos',
+    'zoom.label'                            => 'alle Videos in den Kacheln vergößern / heran-zoomen',
+];

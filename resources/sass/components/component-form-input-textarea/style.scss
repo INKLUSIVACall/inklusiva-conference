@@ -1,0 +1,22 @@
+//
+// style
+//
+textarea {
+    background: $colorWhite;
+    border-width: 3px;
+    border-style: solid;
+    padding: 10px 56px 10px 16px;
+    width: 100%;
+    @include setFontSize($font-size: $fontSize-005);
+    @include setLineHeight($font-size: $fontSize-005, $line-height-multiplikator: $line-height-multiplikator-default);
+    @include setfontFamily($type: book);
+    height: 230px;
+}
+
+
+@include media-breakpoint-down(lg) {
+    textarea {
+        @include setFontSize($font-size: $fontSize-003);
+        @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-default);
+    }
+}

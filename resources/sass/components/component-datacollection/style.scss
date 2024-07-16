@@ -1,0 +1,122 @@
+//
+// style
+//
+.whitebox {
+
+    .component-datacollection {
+        border-bottom: 2px solid $colorGrau;
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+
+        &:last-of-type {
+            border-bottom: 0px solid $colorGrau;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+
+        .no-headline {
+            .datacollection-item {
+                &:first-of-type {
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        .datacollection-item {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 30px;
+
+            &:first-of-type {
+                margin-top: 30px;
+            }
+
+            .key {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex: 1 1 55%;
+
+                .icon {
+                    width: 42px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 12px;
+                    font-size: 2rem;
+                }
+
+                .title {
+                    @include setfontFamily($type: medium);
+                    @include setFontSize($font-size: $fontSize-005);
+                    @include setLineHeight($font-size: $fontSize-005, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                    padding-right: 20px;
+                }
+            }
+
+            .value {
+                flex: 1 1 45%;
+                @include setfontFamily($type: book);
+                @include setFontSize($font-size: $fontSize-005);
+                @include setLineHeight($font-size: $fontSize-005, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+            }
+        }
+
+        .component-textlink {
+            margin-top: 12px;
+
+            &:first-of-type {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+
+@include media-breakpoint-down(lg) {
+    .whitebox {
+        .component-datacollection {
+            &:last-of-type {
+            }
+
+            .datacollection-item {
+                flex-direction: column;
+                margin-bottom: 33px;
+
+                &:first-of-type {
+                    margin-top: 33px;
+                }
+
+                .key {
+                    flex: 1 1 100%;
+                    margin-bottom: 10px;
+
+                    .icon {
+                        width: 40px;
+                        margin-right: 10px;
+                        font-size: 1.625rem;
+                    }
+
+                    .title {
+                        @include setFontSize($font-size: $fontSize-003);
+                        @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                        padding-right: 20px;
+                    }
+                }
+
+                .value {
+                    flex: 1 1 100%;
+                    @include setFontSize($font-size: $fontSize-003);
+                    @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                }
+            }
+
+            .component-textlink {
+                margin-top: 50px;
+            }
+        }
+    }
+}

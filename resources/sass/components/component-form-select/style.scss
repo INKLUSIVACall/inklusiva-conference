@@ -1,0 +1,90 @@
+//
+// style
+//
+select {
+    border: 3px solid $colorSchiefer;
+}
+
+.component-select-element {
+    background: $colorWhite;
+
+    .component-select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        z-index: 20;
+        background: transparent;
+        padding: 10px 56px 10px 16px;
+        width: 100%;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        margin-top: -12px;
+        right: 24px;
+        width: 18px;
+        height: 18px;
+        border-color: $colorSchiefer;
+        border-width: 0px 3px 3px 0px;
+        border-style: solid;
+        @include rotate(45deg);
+        z-index: 10;
+        @include anim($time: 80ms, $delay: 0ms, $ease: ease);
+    }
+
+    &:focus-within, &:focus-visible, &:visited, &:focus, &:hover {
+        &:after {
+            border-color: $colorKomplementaer;
+        }
+    }
+
+    &.as-language {
+        background-color:transparent;
+        select {
+            border: 0px solid $colorSchiefer;
+            @include setFontSize($font-size: $fontSize-002);
+        }
+
+        .component-select {
+            padding: 8px 32px 8px 4px;
+        }
+
+        &:before{
+            position: absolute;
+            left:0px;
+            bottom:-2px;
+            height:2px;
+            width: 100%;
+            background-color: $colorGrau;
+            content:'';
+            @include anim($time: 80ms, $delay: 0ms, $ease: ease);
+        }
+
+        &:after {
+            margin-top: -8px;
+            right: 4px;
+            width: 12px;
+            height: 12px;
+            border-color: $colorSchiefer;
+            border-width: 0px 2px 2px 0px;
+        }
+
+        &:focus-within, &:focus-visible, &:visited, &:focus, &:hover {
+            &:before{
+                background-color: transparent;
+            }
+
+            &:after {
+                border-color: $colorKomplementaer;
+            }
+        }
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+}
+
+

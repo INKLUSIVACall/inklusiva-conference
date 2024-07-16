@@ -1,0 +1,48 @@
+.login {
+    .login-logo {
+        text-align: center;
+        margin-bottom: 40px;
+        width: 60%;
+    }
+    .whitebox {
+        padding: 120px;
+        margin: 0 200px;
+
+        input {
+            margin-bottom: 20px;
+        }
+    }
+}
+.login-logo {
+    a {
+        &:focus-within,
+        &:focus-visible,
+        &:visited,
+        &:focus,
+        &:hover {
+            outline-width: 12px;
+            outline-color: $colorOutline;
+            outline-style: solid;
+            outline-offset: 0px;
+            border-color: $colorKomplementaer;
+        }
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .login {
+        .login-logo {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 60%;
+        }
+        .whitebox {
+            padding: 40px;
+            margin: 0;
+
+            input {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

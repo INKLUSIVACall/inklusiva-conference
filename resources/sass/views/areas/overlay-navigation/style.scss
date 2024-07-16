@@ -1,0 +1,73 @@
+//
+// style
+//
+[data-area-type="overlay-navigation"] {
+    @include anim($time: $area_Overlay_Navigation_Anim_Time_XXL);
+    background: $colorMitternacht;
+
+    > [data-type="area-wrapper"] {
+        .content{
+            padding:70px 30px 40px 30px;
+
+            .item{
+
+            }
+        }
+    }
+
+    //
+    //  display, position, overflow and z-index attributes
+    //
+
+    // position attributes
+    @include setPosition($position-xxl: $area_Overlay_Navigation_Position_XXL, $position-xl: $area_Overlay_Navigation_Position_XL, $position-lg: $area_Overlay_Navigation_Position_LG, $position-md: $area_Overlay_Navigation_Position_MD, $position-sm: $area_Overlay_Navigation_Position_SM, $position-xs: $area_Overlay_Navigation_Position_XS);
+
+    // z-index attributes
+    @include setZIndex($z-index-xxl: $area_Overlay_Navigation_ZIndex_XXL, $z-index-xl: $area_Overlay_Navigation_ZIndex_XL, $z-index-lg: $area_Overlay_Navigation_ZIndex_LG, $z-index-md: $area_Overlay_Navigation_ZIndex_MD, $z-index-sm: $area_Overlay_Navigation_ZIndex_SM, $z-index-xs: $area_Overlay_Navigation_ZIndex_XS);
+
+
+    //
+    //  positioning attributes
+    //
+
+    // left and right attributes
+    @include setLeft($left-xxl: $area_Overlay_Navigation_Left_XXL, $left-xl: $area_Overlay_Navigation_Left_XL, $left-lg: $area_Overlay_Navigation_Left_LG, $left-md: $area_Overlay_Navigation_Left_MD, $left-sm: $area_Overlay_Navigation_Left_SM, $left-xs: $area_Overlay_Navigation_Left_XS);
+    @include setRight($right-xxl: $area_Overlay_Navigation_Right_XXL, $right-xl: $area_Overlay_Navigation_Right_XL, $right-lg: $area_Overlay_Navigation_Right_LG, $right-md: $area_Overlay_Navigation_Right_MD, $right-sm: $area_Overlay_Navigation_Right_SM, $right-xs: $area_Overlay_Navigation_Right_XS);
+
+    // top and bottom attributes
+    @include setTop($top-xxl: $area_Overlay_Navigation_Top_XXL, $top-xl: $area_Overlay_Navigation_Top_XL, $top-lg: $area_Overlay_Navigation_Top_LG, $top-md: $area_Overlay_Navigation_Top_MD, $top-sm: $area_Overlay_Navigation_Top_SM, $top-xs: $area_Overlay_Navigation_Top_XS);
+    @include setBottom($bottom-xxl: $area_Overlay_Navigation_Bottom_XXL, $bottom-xl: $area_Overlay_Navigation_Bottom_XL, $bottom-lg: $area_Overlay_Navigation_Bottom_LG, $bottom-md: $area_Overlay_Navigation_Bottom_MD, $bottom-sm: $area_Overlay_Navigation_Bottom_SM, $bottom-xs: $area_Overlay_Navigation_Bottom_XS);
+
+    // width and height attributes
+    @include setWidth($width-xxl: $area_Overlay_Navigation_Width_XXL, $width-xl: $area_Overlay_Navigation_Width_XL, $width-lg: $area_Overlay_Navigation_Width_LG, $width-md: $area_Overlay_Navigation_Width_MD, $width-sm: $area_Overlay_Navigation_Width_SM, $width-xs: $area_Overlay_Navigation_Width_XS);
+    @include setHeight($height-xxl: $area_Overlay_Navigation_Height_XXL, $height-xl: $area_Overlay_Navigation_Height_XL, $height-lg: $area_Overlay_Navigation_Height_LG, $height-md: $area_Overlay_Navigation_Height_MD, $height-sm: $area_Overlay_Navigation_Height_SM, $height-xs: $area_Overlay_Navigation_Height_XS);
+
+
+    //
+    //  control attributes
+    //
+
+    @include controlArea(
+        $width-xxl: $area_Overlay_Navigation_Width_XXL, $width-xl: $area_Overlay_Navigation_Width_XL, $width-lg: $area_Overlay_Navigation_Width_LG, $width-md: $area_Overlay_Navigation_Width_MD, $width-sm: $area_Overlay_Navigation_Width_SM, $width-xs: $area_Overlay_Navigation_Width_XS,
+        $height-xxl: $area_Overlay_Navigation_Height_XXL, $height-xl: $area_Overlay_Navigation_Height_XL, $height-lg: $area_Overlay_Navigation_Height_LG, $height-md: $area_Overlay_Navigation_Height_MD, $height-sm: $area_Overlay_Navigation_Height_SM, $height-xs: $area_Overlay_Navigation_Height_XS,
+        $top-xxl: $area_Overlay_Navigation_Top_XXL, $top-xl: $area_Overlay_Navigation_Top_XL, $top-lg: $area_Overlay_Navigation_Top_LG, $top-md: $area_Overlay_Navigation_Top_MD, $top-sm: $area_Overlay_Navigation_Top_SM, $top-xs: $area_Overlay_Navigation_Top_XS,
+        $bottom-xxl: $area_Overlay_Navigation_Bottom_XXL, $bottom-xl: $area_Overlay_Navigation_Bottom_XL, $bottom-lg: $area_Overlay_Navigation_Bottom_LG, $bottom-md: $area_Overlay_Navigation_Bottom_MD, $bottom-sm: $area_Overlay_Navigation_Bottom_SM, $bottom-xs: $area_Overlay_Navigation_Bottom_XS,
+        $left-xxl: $area_Overlay_Navigation_Left_XXL, $left-xl: $area_Overlay_Navigation_Left_XL, $left-lg: $area_Overlay_Navigation_Left_LG, $left-md: $area_Overlay_Navigation_Left_MD, $left-sm: $area_Overlay_Navigation_Left_SM, $left-xs: $area_Overlay_Navigation_Left_XS,
+        $right-xxl: $area_Overlay_Navigation_Right_XXL, $right-xl: $area_Overlay_Navigation_Right_XL, $right-lg: $area_Overlay_Navigation_Right_LG, $right-md: $area_Overlay_Navigation_Right_MD, $right-sm: $area_Overlay_Navigation_Right_SM, $right-xs: $area_Overlay_Navigation_Right_XS,
+        $hide-xxl: $area_Overlay_Navigation_Hide_XXL, $hide-xl: $area_Overlay_Navigation_Hide_XL, $hide-lg: $area_Overlay_Navigation_Hide_LG, $hide-md: $area_Overlay_Navigation_Hide_MD, $hide-sm: $area_Overlay_Navigation_Hide_SM, $hide-xs: $area_Overlay_Navigation_Hide_XS,
+        $after-element-xxl: $area_Overlay_Navigation_After_Element_XXL, $after-element-xl: $area_Overlay_Navigation_After_Element_XL, $after-element-lg: $area_Overlay_Navigation_After_Element_LG, $after-element-md: $area_Overlay_Navigation_After_Element_MD, $after-element-sm: $area_Overlay_Navigation_After_Element_SM, $after-element-xs: $area_Overlay_Navigation_After_Element_XS,
+        $anim-type-xxl: $area_Overlay_Navigation_Anim_Type_XXL, $anim-type-xl: $area_Overlay_Navigation_Anim_Type_XL, $anim-type-lg: $area_Overlay_Navigation_Anim_Type_LG, $anim-type-md: $area_Overlay_Navigation_Anim_Type_MD, $anim-type-sm: $area_Overlay_Navigation_Anim_Type_SM, $anim-type-xs: $area_Overlay_Navigation_Anim_Type_XS,
+        $anim-attribute-xxl: $area_Overlay_Navigation_Anim_Attribute_XXL, $anim-attribute-xl: $area_Overlay_Navigation_Anim_Attribute_XL, $anim-attribute-lg: $area_Overlay_Navigation_Anim_Attribute_LG, $anim-attribute-md: $area_Overlay_Navigation_Anim_Attribute_MD, $anim-attribute-sm: $area_Overlay_Navigation_Anim_Attribute_SM, $anim-attribute-xs: $area_Overlay_Navigation_Anim_Attribute_XS,
+        $anim-time-xxl: $area_Overlay_Navigation_Anim_Time_XXL, $anim-time-xl: $area_Overlay_Navigation_Anim_Time_XL, $anim-time-lg: $area_Overlay_Navigation_Anim_Time_LG, $anim-time-md: $area_Overlay_Navigation_Anim_Time_MD, $anim-time-sm: $area_Overlay_Navigation_Anim_Time_SM, $anim-time-xs: $area_Overlay_Navigation_Anim_Time_XS
+    );
+
+    //
+    //  after element attributes
+    //
+    @include buildAfterElement(
+        $after-element-xxl: $area_Overlay_Navigation_After_Element_XXL, $after-element-xl: $area_Overlay_Navigation_After_Element_XL, $after-element-lg: $area_Overlay_Navigation_After_Element_LG, $after-element-md: $area_Overlay_Navigation_After_Element_MD, $after-element-sm: $area_Overlay_Navigation_After_Element_SM, $after-element-xs: $area_Overlay_Navigation_After_Element_XS,
+        $background-color-after-xxl: $area_Overlay_Navigation_After_BG_Color_XXL, $background-color-after-xl: $area_Overlay_Navigation_After_BG_Color_XL, $background-color-after-lg: $area_Overlay_Navigation_After_BG_Color_LG, $background-color-after-md: $area_Overlay_Navigation_After_BG_Color_MD, $background-color-after-sm: $area_Overlay_Navigation_After_BG_Color_SM, $background-color-after-xs: $area_Overlay_Navigation_After_BG_Color_XS,
+        $transparency-after-xxl: $area_Overlay_Navigation_After_Transparency_XXL, $transparency-after-xl: $area_Overlay_Navigation_After_Transparency_XL, $transparency-after-lg: $area_Overlay_Navigation_After_Transparency_LG, $transparency-after-md: $area_Overlay_Navigation_After_Transparency_MD, $transparency-after-sm: $area_Overlay_Navigation_After_Transparency_SM, $transparency-after-xs: $area_Overlay_Navigation_After_Transparency_XS,
+        $z-index-after-xxl: $area_Overlay_Navigation_After_Zindex_XXL, $z-index-after-xl: $area_Overlay_Navigation_After_Zindex_XL, $z-index-after-lg: $area_Overlay_Navigation_After_Zindex_LG, $z-index-after-md: $area_Overlay_Navigation_After_Zindex_MD, $z-index-after-sm: $area_Overlay_Navigation_After_Zindex_SM, $z-index-after-xs: $area_Overlay_Navigation_After_Zindex_XS
+    );
+}

@@ -1,0 +1,207 @@
+//
+//  variables
+//
+
+//
+//  display, position, overflow and z-index attributes
+//
+
+// display
+$area_Display_XXL: flex;
+$area_Display_XL: flex;
+$area_Display_LG: flex;
+$area_Display_MD: flex;
+$area_Display_SM: flex;
+$area_Display_XS: flex;
+
+// position
+$area_Position_XXL: relative;
+$area_Position_XL: relative;
+$area_Position_LG: relative;
+$area_Position_MD: relative;
+$area_Position_SM: relative;
+$area_Position_XS: relative;
+
+// overflow
+$area_Overflow_XXL: initial;
+$area_Overflow_XL: initial;
+$area_Overflow_LG: initial;
+$area_Overflow_MD: initial;
+$area_Overflow_SM: initial;
+$area_Overflow_XS: initial;
+
+//  z-index
+$area_ZIndex_XXL: 1;
+$area_ZIndex_XL: 1;
+$area_ZIndex_LG: 1;
+$area_ZIndex_MD: 1;
+$area_ZIndex_SM: 1;
+$area_ZIndex_XS: 1;
+
+
+
+//
+//  flex attributes
+//
+
+// flex grow
+$area_Flex-Grow_XXL: 1;
+$area_Flex-Grow_XL: 1;
+$area_Flex-Grow_LG: 1;
+$area_Flex-Grow_MD: 1;
+$area_Flex-Grow_SM: 1;
+$area_Flex-Grow_XS: 1;
+
+// flex shrink
+$area_Flex-Shrink_XXL: 1;
+$area_Flex-Shrink_XL: 1;
+$area_Flex-Shrink_LG: 1;
+$area_Flex-Shrink_MD: 1;
+$area_Flex-Shrink_SM: 1;
+$area_Flex-Shrink_XS: 1;
+
+// flex basis
+$area_Flex-Basis_XXL: auto;
+$area_Flex-Basis_XL: auto;
+$area_Flex-Basis_LG: auto;
+$area_Flex-Basis_MD: auto;
+$area_Flex-Basis_SM: auto;
+$area_Flex-Basis_XS: auto;
+
+
+
+//
+//  positioning attributes
+//
+
+// left
+$area_Left_XXL: 0px;
+$area_Left_XL: 0px;
+$area_Left_LG: 0px;
+$area_Left_MD: 0px;
+$area_Left_SM: 0px;
+$area_Left_XS: 0px;
+
+// right
+$area_Right_XXL: auto;
+$area_Right_XL: auto;
+$area_Right_LG: auto;
+$area_Right_MD: auto;
+$area_Right_SM: auto;
+$area_Right_XS: auto;
+
+// top
+$area_Top_XXL: 0px;
+$area_Top_XL: 0px;
+$area_Top_LG: 0px;
+$area_Top_MD: 0px;
+$area_Top_SM: 0px;
+$area_Top_XS: 0px;
+
+// bottom
+$area_Bottom_XXL: auto;
+$area_Bottom_XL: auto;
+$area_Bottom_LG: auto;
+$area_Bottom_MD: auto;
+$area_Bottom_SM: auto;
+$area_Bottom_XS: auto;
+
+// width
+$area_Width_XXL: auto;
+$area_Width_XL: auto;
+$area_Width_LG: auto;
+$area_Width_MD: auto;
+$area_Width_SM: auto;
+$area_Width_XS: auto;
+
+// height
+$area_Height_XXL: auto;
+$area_Height_XL: auto;
+$area_Height_LG: auto;
+$area_Height_MD: auto;
+$area_Height_SM: auto;
+$area_Height_XS: auto;
+
+
+
+
+
+//
+//  formatting attributes
+//
+
+// background-color
+$area_BG_Color_XXL: transparent;
+$area_BG_Color_XL: transparent;
+$area_BG_Color_LG: transparent;
+$area_BG_Color_MD: transparent;
+$area_BG_Color_SM: transparent;
+$area_BG_Color_XS: transparent;
+
+// color
+$area_Color_XXL: $colorText;
+$area_Color_XL: $colorText;
+$area_Color_LG: $colorText;
+$area_Color_MD: $colorText;
+$area_Color_SM: $colorText;
+$area_Color_XS: $colorText;
+
+// margin
+$area_Margin_XXL: 0px 0px 0px 0px;
+$area_Margin_XL: 0px 0px 0px 0px;
+$area_Margin_LG: 0px 0px 0px 0px;
+$area_Margin_MD: 0px 0px 0px 0px;
+$area_Margin_SM: 0px 0px 0px 0px;
+$area_Margin_XS: 0px 0px 0px 0px;
+
+// padding
+$area_Padding_XXL: 0px 0px 0px 0px;
+$area_Padding_XL: 0px 0px 0px 0px;
+$area_Padding_LG: 0px 0px 0px 0px;
+$area_Padding_MD: 0px 0px 0px 0px;
+$area_Padding_SM: 0px 0px 0px 0px;
+$area_Padding_XS: 0px 0px 0px 0px;
+
+//
+//  wrapper attributes
+//
+
+// overflow wrapper
+$area_Overflow_Wrapper_XXL: initial;
+$area_Overflow_Wrapper_XL: initial;
+$area_Overflow_Wrapper_LG: initial;
+$area_Overflow_Wrapper_MD: initial;
+$area_Overflow_Wrapper_SM: initial;
+$area_Overflow_Wrapper_XS: initial;
+
+// width wrapper
+$area_Width_Wrapper_XXL: 100%;
+$area_Width_Wrapper_XL: 100%;
+$area_Width_Wrapper_LG: 100%;
+$area_Width_Wrapper_MD: 100%;
+$area_Width_Wrapper_SM: 100%;
+$area_Width_Wrapper_XS: 100%;
+
+// flex direction
+$area_Flex_Direction_Wrapper_XXL: column;
+$area_Flex_Direction_Wrapper_XL: column;
+$area_Flex_Direction_Wrapper_LG: column;
+$area_Flex_Direction_Wrapper_MD: column;
+$area_Flex_Direction_Wrapper_SM: column;
+$area_Flex_Direction_Wrapper_XS: column;
+
+// margin
+$area_Margin_Wrapper_XXL: 0px 0px 0px 0px;
+$area_Margin_Wrapper_XL: 0px 0px 0px 0px;
+$area_Margin_Wrapper_LG: 0px 0px 0px 0px;
+$area_Margin_Wrapper_MD: 0px 0px 0px 0px;
+$area_Margin_Wrapper_SM: 0px 0px 0px 0px;
+$area_Margin_Wrapper_XS: 0px 0px 0px 0px;
+
+// padding
+$area_Padding_Wrapper_XXL: 0px 0px 0px 0px;
+$area_Padding_Wrapper_XL: 0px 0px 0px 0px;
+$area_Padding_Wrapper_LG: 0px 0px 0px 0px;
+$area_Padding_Wrapper_MD: 0px 0px 0px 0px;
+$area_Padding_Wrapper_SM: 0px 0px 0px 0px;
+$area_Padding_Wrapper_XS: 0px 0px 0px 0px;

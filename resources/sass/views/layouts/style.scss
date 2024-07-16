@@ -1,0 +1,16 @@
+//
+// style
+//
+[data-type="view"] {
+    position: relative;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    z-index: 1;
+    flex-direction: column;
+    height: 100%;
+    max-height: auto;
+    min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}

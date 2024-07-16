@@ -1,0 +1,29 @@
+//
+// style
+//
+.burgermeue {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    //@include setHeight($height-xxl: $component_Burgermenue_Height_XXL, $height-xl: $component_Burgermenue_Height_XL, $height-lg: $component_Burgermenue_Height_LG, $height-md: $component_Burgermenue_Height_MD, $height-sm: $component_Burgermenue_Height_SM, $height-xs: $component_Burgermenue_Height_XS);
+    //@include setWidth($width-xxl: $component_Burgermenue_Width_XXL, $width-xl: $component_Burgermenue_Width_XL, $width-lg: $component_Burgermenue_Width_LG, $width-md: $component_Burgermenue_Width_MD, $width-sm: $component_Burgermenue_Width_SM, $width-xs: $component_Burgermenue_Width_XS);
+    @include setBurgerMenue($colorBackground: $colorSchiefer);
+    cursor: pointer;
+    z-index: 20;
+    top: 12px;
+    right: 30px;
+}
+
+@include media-breakpoint-up(lg) {
+    .burgermeue {
+        display: none;
+    }
+}
+
+
+
+.overlay-navigation-open {
+    .burgermeue {
+        @include setBurgerMenue($colorBackground: $colorWhite, $open: true);
+    }
+}

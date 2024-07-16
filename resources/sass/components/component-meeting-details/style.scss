@@ -1,0 +1,105 @@
+.meeting-details {
+    h2 {
+        font-family: $fontFamily-Medium;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .meeting-details-summary {
+        padding: 0;
+        li {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            margin-bottom: 30px;
+
+            i {
+                width: 50px;
+                margin-right: 20px;
+            }
+
+            p {
+                font-family: $fontFamily-Medium;
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.meeting-link-block {
+    border-bottom: 1px solid $colorSchiefer;
+    margin-bottom: 50px;
+
+    h2 {
+        margin-bottom: 30px;
+        i {
+            margin-right: 20px;
+        }
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: $colorKomplementaer; //$colorSchiefer;
+        overflow-wrap: break-word;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        margin-bottom: 50px;
+    }
+    ul {
+        margin-bottom: 50px;
+        li {
+            font-weight: bolder;
+        }
+    }
+    .mail {
+        cursor: pointer;
+        margin-bottom: 50px;
+        i {
+            margin-right: 10px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // no border for the last element
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .meeting-details {
+        h2 {
+            font-size: 26px;
+        }
+
+        .meeting-details-summary {
+            li {
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .meeting-link-block {
+        h2 {
+            font-size: 24px;
+        }
+        i {
+            display: none;
+        }
+        ul {
+            li {
+                font-weight: bold;
+            }
+        }
+    }
+}

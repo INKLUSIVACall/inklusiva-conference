@@ -1,0 +1,56 @@
+//
+// style
+//
+.component-whitebox {
+    padding: 0px 15px;
+
+    .whitebox-title {
+        margin: 70px 0px 30px 0px;
+
+        h1, h2, h3, h4, h5, h6, legend {
+            @include setFontSize($font-size: $fontSize-007);
+            @include setLineHeight($font-size: $fontSize-007, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+            padding: 0px;
+            margin: 0px;
+            @include setfontFamily($type: medium);
+        }
+    }
+
+    .whitebox {
+        background: $colorWhite;
+        padding: 100px 200px;
+        margin: 0px 0px 60px 0px;
+        @include rounded(20px);
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .component-whitebox {
+        .whitebox-title {
+            h1, h2, h3, h4, h5, h6, legend {
+            }
+        }
+
+        .whitebox {
+            padding: 100px 100px;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .component-whitebox {
+        .whitebox-title {
+            margin: 40px 0px 20px 0px;
+
+            h1, h2, h3, h4, h5, h6, legend {
+                @include setFontSize($font-size: $fontSize-006);
+                @include setLineHeight($font-size: $fontSize-006, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+            }
+        }
+
+        .whitebox {
+            padding: 40px 30px 50px 30px;
+            margin: 0px 0px 20px 0px;
+        }
+    }
+}

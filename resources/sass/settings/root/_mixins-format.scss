@@ -1,0 +1,903 @@
+//
+// mixins margin & padding
+//
+
+// set padding
+@mixin setResponsiveBorderColors() {
+  border: 1px solid black;
+
+  &:after {
+    @include setAfter($content: xs, $color: black);
+  }
+
+  @include media-breakpoint-up(sm) {
+    border: 1px solid aqua;
+
+    &:after {
+      @include setAfter($content: sm, $color: aqua);
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    border: 1px solid orange;
+
+    &:after {
+      @include setAfter($content: md, $color: orange);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    border: 1px solid green;
+
+    &:after {
+      @include setAfter($content: lg, $color: green);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    border: 1px solid red;
+
+    &:after {
+      @include setAfter($content: xl, $color: red);
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    border: 1px solid blue;
+
+    &:after {
+      @include setAfter($content: xxl, $color: blue);
+    }
+  }
+}
+
+@mixin setAfter($content: xxl, $color: blue) {
+  position: absolute;
+  content: '#{$content}';
+  border: 1px solid $color;
+  top: 0px;
+  right: 0px;
+  background-color: $color;
+  color: white;
+  padding: 2px 4px;
+  @include setFontSizeByType($type: tiny);
+}
+
+@mixin showTheGrid() {
+  .container {
+    background: transparentize(red, 0.7);
+
+    .row {
+      margin-bottom: 20px;
+
+      div[class*="col-"] {
+        > div {
+          background: transparentize(blue, 0.5);
+        }
+      }
+    }
+  }
+}
+
+// set padding
+@mixin setPadding($padding-xxl: 0px, $padding-xl: 0px, $padding-lg: 0px, $padding-md: 0px, $padding-sm: 0px, $padding-xs: 0px) {
+  //@include setResponsiveBorderColors();
+  //@include showTheGrid();
+  padding: $padding-xs;
+
+  @include media-breakpoint-up(sm) {
+    padding: $padding-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: $padding-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: $padding-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: $padding-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: $padding-xxl;
+  }
+}
+
+// set margin
+@mixin setMargin($margin-xxl: 0px, $margin-xl: 0px, $margin-lg: 0px, $margin-md: 0px, $margin-sm: 0px, $margin-xs: 0px) {
+  margin: $margin-xs;
+
+  @include media-breakpoint-up(sm) {
+    margin: $margin-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: $margin-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: $margin-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin: $margin-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin: $margin-xxl;
+  }
+}
+
+
+//
+// mixins rounded
+//
+
+@mixin rounded($radius : $radius_default) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -khtml-border-radius: $radius;
+}
+
+@mixin rounded-top($radius: $radius_default) {
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin rounded-bottom($radius: $radius_default) {
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin rounded-left($radius: $radius_default) {
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin rounded-right($radius: $radius_default) {
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin rounded-right-bottom($radius: $radius_default) {
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin rounded-right-top($radius: $radius_default) {
+    -moz-border-radius-topright: $radius;
+    border-top-right-radius: $radius;
+}
+//
+// mixins width & height
+//
+
+// set width
+@mixin setWidth($width-xxl: 100%, $width-xl: 100%, $width-lg: 100%, $width-md: 100%, $width-sm: 100%, $width-xs: 100%, $maxWidth: false) {
+  @if $maxWidth == false {
+    width: $width-xs;
+
+    @include media-breakpoint-up(sm) {
+      width: $width-sm;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: $width-md;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: $width-lg;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: $width-xl;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: $width-xxl;
+    }
+  }
+
+  @if $maxWidth == true {
+    max-width: $width-xs;
+
+    @include media-breakpoint-up(sm) {
+      max-width: $width-sm;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: $width-md;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: $width-lg;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: $width-xl;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: $width-xxl;
+    }
+  }
+}
+
+@mixin setMinWidth($min-width-xxl: auto, $min-width-xl: auto, $min-width-lg: auto, $min-width-md: auto, $min-width-sm: auto, $min-width-xs: auto) {
+  min-width: $min-width-xs;
+
+  @include media-breakpoint-up(sm) {
+    min-width: $min-width-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    min-width: $min-width-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-width: $min-width-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    min-width: $min-width-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    min-width: $min-width-xxl;
+  }
+}
+
+@mixin setMaxWidth($max-width-xxl: auto, $max-width-xl: auto, $max-width-lg: auto, $max-width-md: auto, $max-width-sm: auto, $max-width-xs: auto) {
+  max-width: $max-width-xs;
+
+  @include media-breakpoint-up(sm) {
+    max-width: $max-width-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: $max-width-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: $max-width-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: $max-width-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: $max-width-xxl;
+  }
+}
+
+// set height
+@mixin setHeight($height-xxl: 100%, $height-xl: 100%, $height-lg: 100%, $height-md: 100%, $height-sm: 100%, $height-xs: 100%) {
+  height: $height-xs;
+
+  @include media-breakpoint-up(sm) {
+    height: $height-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: $height-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $height-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: $height-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    height: $height-xxl;
+  }
+}
+
+@mixin setMaxHeight($max-height-xxl: 100%, $max-height-xl: 100%, $max-height-lg: 100%, $max-height-md: 100%, $max-height-sm: 100%, $max-height-xs: 100%) {
+  max-height: $max-height-xs;
+
+  @include media-breakpoint-up(sm) {
+    max-height: $max-height-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-height: $max-height-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-height: $max-height-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-height: $max-height-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-height: $max-height-xxl;
+  }
+}
+
+@mixin setMinHeight($min-height-xxl: 100%, $min-height-xl: 100%, $min-height-lg: 100%, $min-height-md: 100%, $min-height-sm: 100%, $min-height-xs: 100%) {
+  min-height: $min-height-xs;
+
+  @include media-breakpoint-up(sm) {
+    min-height: $min-height-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: $min-height-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: $min-height-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    min-height: $min-height-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    min-height: $min-height-xxl;
+  }
+}
+
+
+@mixin setRadius($radius-xxl:0px, $radius-xl:0px, $radius-lg:0px, $radius-md:0px, $radius-sm:0px, $radius-xs:0px) {
+  @include media-breakpoint-down(sm) {
+    -moz-border-radius: $radius-xs;
+    -webkit-border-radius: $radius-xs;
+    border-radius: $radius-xs;
+    -khtml-border-radius: $radius-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    -moz-border-radius: $radius-sm;
+    -webkit-border-radius: $radius-sm;
+    border-radius: $radius-sm;
+    -khtml-border-radius: $radius-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    -moz-border-radius: $radius-md;
+    -webkit-border-radius: $radius-md;
+    border-radius: $radius-md;
+    -khtml-border-radius: $radius-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    -moz-border-radius: $radius-lg;
+    -webkit-border-radius: $radius-lg;
+    border-radius: $radius-lg;
+    -khtml-border-radius: $radius-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    -moz-border-radius: $radius-xl;
+    -webkit-border-radius: $radius-xl;
+    border-radius: $radius-xl;
+    -khtml-border-radius: $radius-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    -moz-border-radius: $radius-xxl;
+    -webkit-border-radius: $radius-xxl;
+    border-radius: $radius-xxl;
+    -khtml-border-radius: $radius-xxl;
+  }
+}
+
+
+//
+// mixins display and position
+//
+
+// set display
+@mixin setDisplay($display-xxl:block, $display-xl:block, $display-lg:block, $display-md:block, $display-sm:block, $display-xs:block) {
+  display: $display-xs;
+
+  @include media-breakpoint-up(sm) {
+    display: $display-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: $display-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: $display-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: $display-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    display: $display-xxl;
+  }
+}
+
+// set position
+@mixin setPosition($position-xxl: relative, $position-xl: relative, $position-lg: relative, $position-md: relative, $position-sm: relative, $position-xs: relative) {
+  @include media-breakpoint-down(sm) {
+    position: $position-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    position: $position-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    position: $position-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    position: $position-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    position: $position-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    position: $position-xxl;
+  }
+}
+
+// set overflow y
+@mixin setOverflowY($overflow-xxl: hidden, $overflow-xl: hidden, $overflow-lg: hidden, $overflow-md: hidden, $overflow-sm: hidden, $overflow-xs: hidden) {
+  @include media-breakpoint-down(sm) {
+    overflow-y: $overflow-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    overflow-y: $overflow-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    overflow-y: $overflow-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    overflow-y: $overflow-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    overflow-y: $overflow-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    overflow-y: $overflow-xxl;
+  }
+}
+
+@mixin setOverflowX($overflow-xxl: hidden, $overflow-xl: hidden, $overflow-lg: hidden, $overflow-md: hidden, $overflow-sm: hidden, $overflow-xs: hidden) {
+  @include media-breakpoint-down(sm) {
+    overflow-x: $overflow-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    overflow-x: $overflow-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    overflow-x: $overflow-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    overflow-x: $overflow-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    overflow-x: $overflow-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    overflow-x: $overflow-xxl;
+  }
+}
+
+// set z-index
+@mixin setZIndex($z-index-xxl: 1, $z-index-xl: 1, $z-index-lg: 1, $z-index-md: 1, $z-index-sm: 1, $z-index-xs: 1) {
+  @include media-breakpoint-down(sm) {
+    z-index: $z-index-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    z-index: $z-index-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    z-index: $z-index-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    z-index: $z-index-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    z-index: $z-index-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    z-index: $z-index-xxl;
+  }
+}
+
+// set transparency
+@mixin setTransparency($transparency-xxl: transparent, $transparency-xl: transparent, $transparency-lg: transparent, $transparency-md: transparent, $transparency-sm: transparent, $transparency-xs: transparent) {
+  @include media-breakpoint-down(sm) {
+    filter: alpha(opacity=$transparency-xs*100);
+    -moz-opacity: $transparency-xs;
+    -khtml-opacity: $transparency-xs;
+    opacity: $transparency-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    filter: alpha(opacity=$transparency-sm*100);
+    -moz-opacity: $transparency-sm;
+    -khtml-opacity: $transparency-sm;
+    opacity: $transparency-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    filter: alpha(opacity=$transparency-md*100);
+    -moz-opacity: $transparency-md;
+    -khtml-opacity: $transparency-md;
+    opacity: $transparency-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    filter: alpha(opacity=$transparency-lg*100);
+    -moz-opacity: $transparency-lg;
+    -khtml-opacity: $transparency-lg;
+    opacity: $transparency-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    filter: alpha(opacity=$transparency-xl*100);
+    -moz-opacity: $transparency-xl;
+    -khtml-opacity: $transparency-xl;
+    opacity: $transparency-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    filter: alpha(opacity=$transparency-xxl*100);
+    -moz-opacity: $transparency-xxl;
+    -khtml-opacity: $transparency-xxl;
+    opacity: $transparency-xxl;
+  }
+}
+
+// set color
+@mixin setColor($color-xxl: transparent, $color-xl: transparent, $color-lg: transparent, $color-md: transparent, $color-sm: transparent, $color-xs: transparent) {
+  @include media-breakpoint-down(sm) {
+    color: $color-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    color: $color-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    color: $color-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    color: $color-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    color: $color-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    color: $color-xxl;
+  }
+}
+
+
+// set bgcolor
+@mixin setBGColor($background-color-xxl: transparent, $background-color-xl: transparent, $background-color-lg: transparent, $background-color-md: transparent, $background-color-sm: transparent, $background-color-xs: transparent) {
+  @include media-breakpoint-down(sm) {
+    background-color: $background-color-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    background-color: $background-color-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-color: $background-color-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-color: $background-color-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-color: $background-color-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    background-color: $background-color-xxl;
+  }
+}
+
+// set right
+@mixin setRight($right-xxl: auto, $right-xl: auto, $right-lg: auto, $right-md: auto, $right-sm: auto, $right-xs: auto) {
+  @include media-breakpoint-down(sm) {
+    right: $right-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    right: $right-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    right: $right-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    right: $right-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    right: $right-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    right: $right-xxl;
+  }
+}
+
+// set left
+@mixin setLeft($left-xxl: auto, $left-xl: auto, $left-lg: auto, $left-md: auto, $left-sm: auto, $left-xs: auto) {
+  @include media-breakpoint-down(sm) {
+    left: $left-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    left: $left-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    left: $left-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    left: $left-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    left: $left-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    left: $left-xxl;
+  }
+}
+
+// set bottom
+@mixin setBottom($bottom-xxl: 0px, $bottom-xl: 0px, $bottom-lg: 0px, $bottom-md: 0px, $bottom-sm: 0px, $bottom-xs: 0px) {
+  @include media-breakpoint-down(sm) {
+    bottom: $bottom-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    bottom: $bottom-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    bottom: $bottom-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    bottom: $bottom-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    bottom: $bottom-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    bottom: $bottom-xxl;
+  }
+}
+
+// set top
+@mixin setTop($top-xxl: 0px, $top-xl: 0px, $top-lg: 0px, $top-md: 0px, $top-sm: 0px, $top-xs: 0px) {
+  @include media-breakpoint-down(sm) {
+    top: $top-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    top: $top-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: $top-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: $top-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    top: $top-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    top: $top-xxl;
+  }
+}
+
+//
+// mixins flex
+//
+
+// set flex Grow
+@mixin setFlexGrow($flex-grow-xxl:auto, $flex-grow-xl:auto, $flex-grow-lg:auto, $flex-grow-md:auto, $flex-grow-sm:auto, $flex-grow-xs:auto) {
+  @include media-breakpoint-down(sm) {
+    flex-grow: $flex-grow-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-grow: $flex-grow-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-grow: $flex-grow-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-grow: $flex-grow-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex-grow: $flex-grow-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    flex-grow: $flex-grow-xxl;
+  }
+}
+
+// set flex Shrink
+@mixin setFlexShrink($flex-shrink-xxl:auto, $flex-shrink-xl:auto, $flex-shrink-lg:auto, $flex-shrink-md:auto, $flex-shrink-sm:auto, $flex-shrink-xs:auto) {
+  @include media-breakpoint-down(sm) {
+    flex-shrink: $flex-shrink-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-shrink: $flex-shrink-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-shrink: $flex-shrink-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-shrink: $flex-shrink-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex-shrink: $flex-shrink-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    flex-shrink: $flex-shrink-xxl;
+  }
+}
+
+// set flex Basis
+@mixin setFlexBasis($flex-basis-xxl:auto, $flex-basis-xl:auto, $flex-basis-lg:auto, $flex-basis-md:auto, $flex-basis-sm:auto, $flex-basis-xs:auto) {
+  @include media-breakpoint-down(sm) {
+    flex-basis: $flex-basis-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-basis: $flex-basis-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-basis: $flex-basis-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-basis: $flex-basis-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex-basis: $flex-basis-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    flex-basis: $flex-basis-xxl;
+  }
+}
+
+// set flex Direction
+@mixin setFlexDirection($flex-direction-xxl: row, $flex-direction-xl: row, $flex-direction-lg: row, $flex-direction-md: row, $flex-direction-sm: row, $flex-direction-xs: row) {
+  @include media-breakpoint-down(sm) {
+    flex-direction: $flex-direction-xs;
+  }
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: $flex-direction-sm;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-direction: $flex-direction-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: $flex-direction-lg;
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex-direction: $flex-direction-xl;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    flex-direction: $flex-direction-xxl;
+  }
+}
+
+
+//
+// mixins visibility
+//
+
+// set hide with viewport classname
+@mixin setResponsiveVisibility() {
+  @include media-breakpoint-down(xs) {
+    &.hideXS {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-only(sm) {
+    &.hideSM {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-only(md) {
+    &.hideMD {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-only(lg) {
+    &.hideLG {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-only(xl) {
+    &.hideXL {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-only(xxl) {
+    &.hideXXL {
+      display: none;
+    }
+  }
+}

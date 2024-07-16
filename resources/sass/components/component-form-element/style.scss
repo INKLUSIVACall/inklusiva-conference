@@ -1,0 +1,231 @@
+//
+// style
+//
+
+// Focus, focus-within
+select,
+input,
+textarea {
+    @include setFontSize($font-size: $fontSize-005);
+    @include setLineHeight(
+        $font-size: $fontSize-005,
+        $line-height-multiplikator: $line-height-multiplikator-singlerow
+    );
+}
+
+// Focus, focus-within
+select,
+input:not([type="file"]),
+textarea {
+    outline-width: 0px;
+    outline-color: $colorOutline;
+    outline-style: solid;
+    outline-offset: 0px;
+    border-color: $colorSchiefer;
+    color: $colorSchiefer;
+    @include anim($time: 80ms, $delay: 0ms, $ease: ease);
+
+    &:focus-within,
+    &:focus-visible,
+    &:visited,
+    &:focus,
+    &:hover {
+        outline-width: 12px;
+        outline-color: $colorOutline;
+        outline-style: solid;
+        outline-offset: 0px;
+        border-color: $colorKomplementaer;
+    }
+
+    &[role="switch"] {
+        outline-width: 0px;
+        outline-color: $colorOutline;
+        outline-style: solid;
+        outline-offset: 0px;
+        transition-property: outline-width, background-position !important;
+
+        &:focus-within,
+        &:focus-visible,
+        &:visited,
+        &:focus,
+        &:hover {
+            outline-width: 12px;
+            outline-style: solid;
+            outline-offset: 0px;
+            outline-color: $colorOutline;
+        }
+    }
+}
+
+.whitebox {
+    .component-form-element {
+        margin-bottom: 100px;
+
+        &.bordered {
+        }
+
+        &.component-form-title-desc {
+            margin-bottom: 0px;
+        }
+
+        &:last-of-type,
+        &.no-margin-bottom {
+            margin-bottom: 0px;
+        }
+
+        .element-title-desc {
+            .title {
+                @include setFontSize($font-size: $fontSize-006);
+                @include setLineHeight(
+                    $font-size: $fontSize-006,
+                    $line-height-multiplikator:
+                        $line-height-multiplikator-singlerow
+                );
+                @include setfontFamily($type: medium);
+                padding-bottom: 14px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+                &.book {
+                    @include setfontFamily($type: book);
+                }
+
+                &.small {
+                    @include setFontSize($font-size: $fontSize-003);
+                    @include setLineHeight(
+                        $font-size: $fontSize-003,
+                        $line-height-multiplikator:
+                            $line-height-multiplikator-singlerow
+                    );
+                }
+
+                .icon {
+                    width: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 20px;
+
+                    i {
+                        font-size: 36px;
+                    }
+                }
+
+                &.small {
+                    .icon {
+                        width: 42px;
+
+                        i {
+                            font-size: 32px;
+                        }
+                    }
+                }
+
+                label,
+                .label,
+                legend,
+                .legend {
+                    font-size: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    margin: 0px;
+                }
+            }
+
+            .desc {
+                @include setFontSize($font-size: $fontSize-003);
+                @include setLineHeight(
+                    $font-size: $fontSize-003,
+                    $line-height-multiplikator:
+                        $line-height-multiplikator-default
+                );
+                padding-top: 14px;
+                padding-bottom: 40px;
+            }
+        }
+
+        .element-values {
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .whitebox {
+        .component-form-element {
+            .element-title-desc {
+                .title {
+                    @include setFontSize($font-size: $fontSize-002);
+                    @include setLineHeight(
+                        $font-size: $fontSize-002,
+                        $line-height-multiplikator:
+                            $line-height-multiplikator-singlerow
+                    );
+                    @include setfontFamily($type: medium);
+                    padding-bottom: 12px;
+
+                    &.small {
+                        @include setFontSize($font-size: $fontSize-002);
+                        @include setLineHeight(
+                            $font-size: $fontSize-002,
+                            $line-height-multiplikator:
+                                $line-height-multiplikator-singlerow
+                        );
+                    }
+
+                    .icon {
+                        width: 42px;
+                        margin-right: 12px;
+
+                        i {
+                            font-size: 28px;
+                        }
+                    }
+
+                    &.small {
+                        .icon {
+                            width: 42px;
+
+                            i {
+                                font-size: 28px;
+                            }
+                        }
+                    }
+                }
+
+                .desc {
+                    @include setFontSize($font-size: $fontSize-002);
+                    @include setLineHeight(
+                        $font-size: $fontSize-002,
+                        $line-height-multiplikator:
+                            $line-height-multiplikator-default
+                    );
+                    padding-top: 12px;
+                    padding-bottom: 34px;
+                }
+            }
+
+            .element-values {
+            }
+        }
+    }
+}
+
+.outline {
+    &:focus-within,
+    &:focus-visible,
+    &:visited,
+    &:focus,
+    &:hover {
+        outline-width: 12px;
+        outline-color: $colorOutline;
+        outline-style: solid;
+        outline-offset: 0px;
+        border-color: $colorKomplementaer;
+    }
+
+    a {
+        outline-width: 0px;
+    }
+}

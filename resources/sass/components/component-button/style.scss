@@ -1,0 +1,61 @@
+//
+// style
+//
+.component-button {
+    border: 0px solid red;
+    outline-width: 0px;
+    outline-color: $colorOutline;
+    outline-style: solid;
+    outline-offset: 0px;
+    border-color: $colorSchiefer;
+    box-shadow: none;
+    @include anim($time: 80ms, $delay: 0ms, $ease: ease);
+
+    &:focus-within, &:focus-visible, &:focus, &:hover {
+        outline-width: 12px;
+        outline-color: $colorOutline;
+        outline-style: solid;
+        outline-offset: 0px;
+        border-width: 0px;
+        box-shadow: none;
+        border-color: $colorKomplementaer;
+    }
+
+    @include setFontSize($font-size: $fontSize-003);
+    @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+    padding: 16px 30px;
+    @include rounded(30px);
+
+    // default: button on white background
+    &.btn-secondary {
+        background: $colorHellgrau;
+        color: $colorSchiefer;
+
+        &:focus-within, &:focus-visible, &:focus, &:hover {
+            background: $colorSilber;
+            color: $colorJohannisbeere;
+        }
+    }
+
+    // button on page-bg background
+    &.bg-silver {
+        background: $colorHellgrau;
+        color: $colorSchiefer;
+
+        &:focus-within, &:focus-visible, &:focus, &:hover {
+            background: $colorWhite;
+            color: $colorJohannisbeere;
+        }
+    }
+
+    &.btn-primary {
+        background: $colorMitternacht;
+        color: $colorWhite;
+
+        &:focus-within, &:focus-visible, &:focus, &:hover {
+            background: $colorJohannisbeere;
+            color: $colorWhite;
+        }
+    }
+}
+

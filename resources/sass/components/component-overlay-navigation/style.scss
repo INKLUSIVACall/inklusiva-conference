@@ -1,0 +1,223 @@
+//
+// style
+//
+
+.overlay-navigation {
+    .content {
+        flex:1;
+    }
+
+    .items {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .item {
+            flex: 0 0 auto;
+            width: 100%;
+
+            &.navigation {
+                margin-bottom: 60px;
+            }
+
+            &.language {
+
+            }
+        }
+    }
+
+    ul {
+        position: relative;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            position: relative;
+            padding: 14px 0px 14px 0px;
+            border-bottom: 2px solid transparentize($colorWhite, 0.64);
+            color: $colorWhite;
+
+            form{
+                display: inline-grid;
+            }
+
+            &:last-of-type {
+                border-bottom-width: 0px;
+            }
+
+            a {
+                position: relative;
+                @include setFontSize($font-size: $fontSize-005);
+                @include setLineHeight($font-size: $fontSize-005, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                color: $colorWhite;
+                text-decoration: none;
+                display: block;
+                padding: 4px 30px 4px 0px;
+
+                &:before {
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    width: 40px;
+                    height: 40px;
+                    content: "\f078";
+                    font-family: 'Font Awesome 6 Free';
+                    font-weight: 900;
+                    color: $colorWhite;
+                    font-size: 26px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include rotate(90deg);
+                }
+
+                &:only-child {
+                    padding-right: 0px;
+                    display: initial;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    color: $colorWhite;
+
+                    &:before {
+                        color: $colorWhite;
+                    }
+                }
+            }
+
+            input[type=hidden] + a {
+                padding-right: 0px;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            .as-navigation {
+                position: relative;
+                @include setFontSize($font-size: $fontSize-005);
+                @include setLineHeight($font-size: $fontSize-005, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                color: $colorWhite;
+                text-decoration: none;
+                padding: 4px 4px 4px 4px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+                i {
+                    width: 16px;
+                    font-family: 'Font Awesome 6 Free';
+                    font-weight: 900;
+                    color: $colorWhite;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 12px;
+                }
+
+                &:hover {
+                    color: $colorWhite;
+
+                    i {
+                        color: $colorWhite;
+                    }
+                }
+            }
+
+            > ul {
+                position: relative;
+                width: auto;
+                display: none;
+                flex-direction: column;
+                background: transparent;
+                padding: 8px 0px 4px 0px;
+
+                li {
+                    border-bottom-width: 0px;
+                    padding: 2px 0px 2px 0px;
+
+                    a {
+                        @include setFontSize($font-size: $fontSize-002);
+                        @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                    }
+
+                    .as-navigation {
+                        @include setFontSize($font-size: $fontSize-002);
+                        @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                    }
+                }
+            }
+
+            &.li-open {
+                > a {
+                    color: $colorWhite;
+
+                    &:before {
+                        color: $colorWhite;
+                        @include rotate(0deg);
+                    }
+                }
+
+                > ul {
+                    display: flex;
+                }
+            }
+
+            &.li-active {
+                > a {
+                    padding-left: 40px;
+
+                    &:after {
+                        position: absolute;
+                        left: 2px;
+                        top: 0px;
+                        width: 26px;
+                        height: 44px;
+                        content: "\f061";
+                        font-family: 'Font Awesome 6 Free';
+                        font-weight: 900;
+                        color: $colorWhite;
+                        font-size: 22px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+            > ul {
+                li {
+                    &.li-active {
+                        > a {
+                            padding-left: 32px;
+
+                            &:after {
+                                height: 37px;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .overlay-navigation {
+        display: none;
+    }
+}
+

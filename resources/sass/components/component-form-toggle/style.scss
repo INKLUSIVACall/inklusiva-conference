@@ -1,0 +1,70 @@
+//
+// style
+//
+
+.form-switch {
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    justify-content: flex-start;
+
+    .form-check-input {
+        flex: 0 0 70px;
+        margin: 0px 0px 0px 0px;
+        width: 70px;
+        height: 40px;
+        border-width: 4px;
+        border-color: $colorSchiefer;
+        box-shadow: none;
+        --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23383838'/%3e%3c/svg%3e");
+        cursor: pointer;
+
+        &:checked {
+            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
+            background-color: $colorBlattgruen;
+            border-color: $colorBlattgruen;
+        }
+
+        &:focus {
+            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%232E5E74'/%3e%3c/svg%3e");
+            border-color: $colorKomplementaer;
+
+            &:checked {
+                --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
+            }
+        }
+    }
+
+    label {
+        cursor: pointer;
+        padding-left:20px;
+        @include setFontSize($font-size: $fontSize-003);
+        @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-default);
+    }
+
+    .for-screenreader {
+        display: none;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .form-switch {
+        .form-check-input {
+            &:checked {
+            }
+
+            &:focus {
+                &:checked {
+                }
+            }
+        }
+
+        label {
+            @include setFontSize($font-size: $fontSize-002);
+            @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-default);
+        }
+
+        .for-screenreader {
+        }
+    }
+}

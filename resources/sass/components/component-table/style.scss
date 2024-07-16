@@ -1,0 +1,27 @@
+.component-table {
+    .table {
+        font-size: 20px;
+        --bs-table-bg: transparent;
+
+        td.action {
+            text-align: right;
+
+            .component-button {
+                font-size: 18px;
+                font-family: $fontFamily-Book;
+                padding: 5px 15px;
+
+                i {
+                    margin-right: 5px;
+                }
+
+            }
+
+        }
+
+        .right {
+            text-align: right;
+        }
+    }
+}
+

@@ -1,0 +1,14 @@
+ //
+// style
+//
+
+html {
+    @include fontSizeRoot();
+
+    body {
+        background: $colorSilber;
+        @include setfontFamily($type: book);
+        @include setFontSizeByType($type: content-default);
+        color: $colorSchiefer;
+    }
+}

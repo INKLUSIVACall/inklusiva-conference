@@ -1,0 +1,37 @@
+//
+// style
+//
+.footer {
+    background: $colorDunkelgrau;
+    @include setPadding($padding-xxl: $component_Footer_Padding_XXL, $padding-xl: $component_Footer_Padding_XL, $padding-lg: $component_Footer_Padding_LG, $padding-md: $component_Footer_Padding_MD, $padding-sm: $component_Footer_Padding_SM, $padding-xs: $component_Footer_Padding_XS);
+    color: white;
+
+    .nav-title {
+        @include setfontFamily($type: medium);
+        @include setFontSize($font-size: $fontSize-006);
+        @include setLineHeight($font-size: $fontSize-006, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+        margin-bottom: 24px;
+    }
+
+    .nav-item-buttons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        nav {
+
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .footer {
+        .nav-item-buttons {
+            nav {
+                width: 100%;
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+

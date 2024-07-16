@@ -1,0 +1,27 @@
+//
+// style
+//
+input[type="text"], input[type="password"], input[type="email"] {
+    background: $colorWhite;
+    border-width: 3px;
+    border-style: solid;
+    padding: 10px 56px 10px 16px;
+    width: 100%;
+    @include setFontSize($font-size: $fontSize-005);
+    @include setLineHeight($font-size: $fontSize-005, $line-height-multiplikator: $line-height-multiplikator-default);
+    @include setfontFamily($type: book);
+}
+
+@include media-breakpoint-down(lg) {
+    input[type="text"], input[type="password"] {
+        @include setFontSize($font-size: $fontSize-003);
+        @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-default);
+    }
+}
+
+.password-eye {
+    position: absolute;
+    right: 16px;
+    top: 27%;
+    cursor: pointer;
+}

@@ -1,0 +1,99 @@
+//
+// style
+//
+[data-type="area"] {
+    [data-type="area-wrapper"] {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        background-color: inherit;
+        z-index: inherit;
+
+        .container {
+            width: auto;
+
+            @include media-breakpoint-down(lg) {
+                max-width: 100%;
+            }
+        }
+
+        //
+        //  wrapper attributes
+        //
+
+        // overflow wrapper attributes
+        overflow: initial;
+
+        // width wrapper attributes
+        @include setWidth($width-xxl: $area_Width_Wrapper_XXL, $width-xl: $area_Width_Wrapper_XL, $width-lg: $area_Width_Wrapper_LG, $width-md: $area_Width_Wrapper_MD, $width-sm: $area_Width_Wrapper_SM, $width-xs: $area_Width_Wrapper_XS);
+
+        // flex-direction wrapper attributes
+        @include setFlexDirection($flex-direction-xxl: $area_Flex_Direction_Wrapper_XXL, $flex-direction-xl: $area_Flex_Direction_Wrapper_XL, $flex-direction-lg: $area_Flex_Direction_Wrapper_LG, $flex-direction-md: $area_Flex_Direction_Wrapper_MD, $flex-direction-sm: $area_Flex_Direction_Wrapper_SM, $flex-direction-xs: $area_Flex_Direction_Wrapper_XS);
+
+        // margin and padding attributes
+        @include setPadding($padding-xxl: $area_Padding_Wrapper_XXL, $padding-xl: $area_Padding_Wrapper_XL, $padding-lg: $area_Padding_Wrapper_LG, $padding-md: $area_Padding_Wrapper_MD, $padding-sm: $area_Padding_Wrapper_SM, $padding-xs: $area_Padding_Wrapper_XS);
+        @include setMargin($margin-xxl: $area_Margin_Wrapper_XXL, $margin-xl: $area_Margin_Wrapper_XL, $margin-lg: $area_Margin_Wrapper_LG, $margin-md: $area_Margin_Wrapper_MD, $margin-sm: $area_Margin_Wrapper_SM, $margin-xs: $area_Margin_Wrapper_XS);
+    }
+
+    //
+    //  display, position, overflow and z-index attributes
+    //
+
+    // display attributes
+    @include setDisplay($display-xxl: $area_Display_XXL, $display-xl: $area_Display_XL, $display-lg: $area_Display_LG, $display-md: $area_Display_MD, $display-sm: $area_Display_SM, $display-xs: $area_Display_XS);
+
+    // position attributes
+    @include setPosition($position-xxl: $area_Position_XXL, $position-xl: $area_Position_XL, $position-lg: $area_Position_LG, $position-md: $area_Position_MD, $position-sm: $area_Position_SM, $position-xs: $area_Position_XS);
+
+    // overflow attributes
+    @include setOverflowY($overflow-xxl: $area_Overflow_XXL, $overflow-xl: $area_Overflow_XL, $overflow-lg: $area_Overflow_LG, $overflow-md: $area_Overflow_MD, $overflow-sm: $area_Overflow_SM, $overflow-xs: $area_Overflow_XS);
+    @include setOverflowX();
+
+    // z-index attributes
+    @include setZIndex($z-index-xxl: $area_ZIndex_XXL, $z-index-xl: $area_ZIndex_XL, $z-index-lg: $area_ZIndex_LG, $z-index-md: $area_ZIndex_MD, $z-index-sm: $area_ZIndex_SM, $z-index-xs: $area_ZIndex_XS);
+
+
+    //
+    //  flex attributes
+    //
+
+    // flex basis, grow, shrink
+    @include setFlexBasis($flex-basis-xxl: $area_Flex-Basis_XXL, $flex-basis-xl: $area_Flex-Basis_XL, $flex-basis-lg: $area_Flex-Basis_LG, $flex-basis-md: $area_Flex-Basis_MD, $flex-basis-sm: $area_Flex-Basis_SM, $flex-basis-xs: $area_Flex-Basis_XS);
+    @include setFlexGrow($flex-grow-xxl: $area_Flex-Grow_XXL, $flex-grow-xl: $area_Flex-Grow_XL, $flex-grow-lg: $area_Flex-Grow_LG, $flex-grow-md: $area_Flex-Grow_MD, $flex-grow-sm: $area_Flex-Grow_SM, $flex-grow-xs: $area_Flex-Grow_XS);
+    @include setFlexShrink($flex-shrink-xxl: $area_Flex-Shrink_XXL, $flex-shrink-xl: $area_Flex-Shrink_XL, $flex-shrink-lg: $area_Flex-Shrink_LG, $flex-shrink-md: $area_Flex-Shrink_MD, $flex-shrink-sm: $area_Flex-Shrink_SM, $flex-shrink-xs: $area_Flex-Shrink_XS);
+
+
+    //
+    //  positioning attributes
+    //
+
+    // left and right attributes
+    @include setLeft($left-xxl: $area_Left_XXL, $left-xl: $area_Left_XL, $left-lg: $area_Left_LG, $left-md: $area_Left_MD, $left-sm: $area_Left_SM, $left-xs: $area_Left_XS);
+    @include setRight($right-xxl: $area_Right_XXL, $right-xl: $area_Right_XL, $right-lg: $area_Right_LG, $right-md: $area_Right_MD, $right-sm: $area_Right_SM, $right-xs: $area_Right_XS);
+
+    // top and bottom attributes
+    @include setTop($top-xxl: $area_Top_XXL, $top-xl: $area_Top_XL, $top-lg: $area_Top_LG, $top-md: $area_Top_MD, $top-sm: $area_Top_SM, $top-xs: $area_Top_XS);
+    @include setBottom($bottom-xxl: $area_Bottom_XXL, $bottom-xl: $area_Bottom_XL, $bottom-lg: $area_Bottom_LG, $bottom-md: $area_Bottom_MD, $bottom-sm: $area_Bottom_SM, $bottom-xs: $area_Bottom_XS);
+
+    // width and height attributes
+    @include setWidth($width-xxl: $area_Width_XXL, $width-xl: $area_Width_XL, $width-lg: $area_Width_LG, $width-md: $area_Width_MD, $width-sm: $area_Width_SM, $width-xs: $area_Width_XS);
+    @include setHeight($height-xxl: $area_Height_XXL, $height-xl: $area_Height_XL, $height-lg: $area_Height_LG, $height-md: $area_Height_MD, $height-sm: $area_Height_SM, $height-xs: $area_Height_XS);
+
+
+    //
+    //  formatting attributes
+    //
+
+    // background-color attributes
+    @include setBGColor($background-color-xxl: $area_BG_Color_XXL, $background-color-xl: $area_BG_Color_XL, $background-color-lg: $area_BG_Color_LG, $background-color-md: $area_BG_Color_MD, $background-color-sm: $area_BG_Color_SM, $background-color-xs: $area_BG_Color_XS);
+
+    // color attributes
+    @include setColor($color-xxl: $area_Color_XXL, $color-xl: $area_Color_XL, $color-lg: $area_Color_LG, $color-md: $area_Color_MD, $color-sm: $area_Color_SM, $color-xs: $area_Color_XS);
+
+    // margin and padding attributes
+    @include setPadding($padding-xxl: $area_Padding_XXL, $padding-xl: $area_Padding_XL, $padding-lg: $area_Padding_LG, $padding-md: $area_Padding_MD, $padding-sm: $area_Padding_SM, $padding-xs: $area_Padding_XS);
+    @include setMargin($margin-xxl: $area_Margin_XXL, $margin-xl: $area_Margin_XL, $margin-lg: $area_Margin_LG, $margin-md: $area_Margin_MD, $margin-sm: $area_Margin_SM, $margin-xs: $area_Margin_XS);
+}

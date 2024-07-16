@@ -1,0 +1,20 @@
+//
+// style
+//
+[data-area-type="main"] {
+    flex-direction: column;
+
+    > [data-type="area-wrapper"] {
+        flex: 1 1 auto;
+
+        main{
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,96 @@
+//
+// style
+//
+.component-dashboard-item {
+    position: relative;
+    height: 100%;
+    padding-bottom: 30px;
+
+    .box {
+        position: relative;
+        background-color: $colorWhite;
+        @include rounded(20px);
+        padding: 44px 70px 60px 70px;
+        height: 100%;
+
+        .headline {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding-bottom: 32px;
+            border-bottom: 2px solid $colorGrau;
+
+            .icon {
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 20px;
+
+                i {
+                    font-size: 2.25rem;
+                }
+            }
+
+            .title {
+                @include setFontSize($font-size: $fontSize-006);
+                @include setLineHeight($font-size: $fontSize-006, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+            }
+        }
+
+        .desc {
+            margin: 40px 0px 60px;
+            @include setFontSize($font-size: $fontSize-004);
+            @include setLineHeight($font-size: $fontSize-004, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .component-dashboard-item {
+        .box {
+            padding: 40px 30px;
+
+            .headline {
+                .icon {
+                    margin-right: 14px;
+
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+
+                .title {
+                    @include setFontSize($font-size: $fontSize-004);
+                    @include setLineHeight($font-size: $fontSize-004, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                }
+            }
+
+            .desc {
+                @include setFontSize($font-size: $fontSize-003);
+                @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+            }
+
+            .buttons {
+                a {
+                    &:last-of-type {
+                    }
+                }
+            }
+        }
+    }
+}

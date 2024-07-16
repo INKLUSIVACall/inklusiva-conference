@@ -1,0 +1,133 @@
+//
+// style
+//
+.component-border-button {
+    @include setFontSize($font-size: $fontSize-002);
+    @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+    color: $colorSchiefer;
+    border: 3px solid $colorDunkelgrau;
+    @include rounded(23px);
+    display: flex;
+    width: fit-content;
+    align-items: stretch;
+    text-decoration: none;
+
+    .icon {
+        display: flex;
+        margin-right: 10px;
+        background: $colorDunkelgrau;
+        color: $colorWhite;
+        width: 43px;
+        padding-left: 1px;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        @include rounded-left(20px);
+        margin-left: -1px;
+        border-right: 3px solid $colorDunkelgrau;
+    }
+
+    .image {
+        background-color: #0a1396;
+        display: flex;
+        margin-right: 10px;
+        width: 43px;
+        padding-left: 1px;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        @include rounded-left(20px);
+        border-right: 3px solid $colorDunkelgrau;
+
+        img {
+            width: 38px;
+            height: auto;
+        }
+    }
+
+    .title {
+        display: inline-block;
+        padding: 6px 32px 6px 12px;
+        flex: 1 1 auto;
+    }
+
+    &.invert {
+        color: $colorWhite;
+        border-color: $colorWhite;
+
+        .icon {
+            background-color: $colorWhite;
+            color: $colorSchiefer;
+            border-right-color: $colorWhite;
+        }
+
+        .image {
+            border-right-color: $colorWhite;
+        }
+    }
+
+    &:hover {
+        border-color: $colorJohannisbeere;
+
+        .icon {
+            background: $colorJohannisbeere;
+            color: $colorWhite;
+            border-color: $colorJohannisbeere;
+        }
+
+        .image {
+            border-color: $colorJohannisbeere;
+        }
+
+        .title {
+            color: $colorJohannisbeere;
+        }
+    }
+
+    &.invert {
+        border-color: $colorWhite;
+
+        &:hover {
+            background-color: $colorJohannisbeere;
+
+            .icon {
+                background: $colorWhite;
+                color: $colorJohannisbeere;
+                border-color: $colorWhite;
+            }
+
+            .image {
+                border-color: $colorWhite;
+            }
+
+            .title {
+                color: $colorWhite;
+            }
+        }
+    }
+}
+
+
+.component-border-button-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    li {
+        padding: 8px 0px;
+
+        &:first-of-type {
+            padding-top: 0px;
+        }
+
+        &:last-of-type {
+            padding-bottom: 0px;
+        }
+
+        .component-border-button {
+            width: 100%;
+        }
+    }
+}
+
+

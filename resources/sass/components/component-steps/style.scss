@@ -1,0 +1,188 @@
+//
+// style
+//
+.component-steps {
+    background: $colorMitternacht;
+    padding: 0px 15px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            height: 12px;
+            bottom: -12px;
+            width: calc(100% + 24px);
+            background: $colorSilber;
+            z-index: 20;
+            content: '';
+            left: -12px;
+        }
+
+        li {
+            margin: 0px 2px;
+            position: relative;
+
+            &:last-of-type {
+                margin-right: 0px;
+            }
+
+            &:first-of-type {
+                margin-left: 0px;
+            }
+
+            a {
+                position: relative;
+                z-index: 1;
+                @include rounded-top(20px);
+                @include setFontSize($font-size: $fontSize-002);
+                @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                @include setfontFamily($type: book);
+                padding: 14px 18px 12px 18px;
+                display: inline-block;
+                color: rgba(255, 255, 255, 0.94);
+                background: darken($colorMitternacht, 11%);
+                text-decoration: none;
+                @include anim($time: 80ms, $delay: 0ms, $ease: ease);
+                outline-width: 0px;
+                outline-style: solid;
+                outline-offset: 0px;
+                outline-color: $colorOutline;
+
+                &:focus-within, &:focus-visible, &:focus, &:hover {
+                    outline-width: 12px;
+                    outline-style: solid;
+                    outline-offset: 0px;
+                    color: $colorWhite;
+                    background: darken($colorMitternacht, 9%);
+                    outline-color: $colorOutline;
+                    z-index: 2;
+                }
+            }
+
+            &.active {
+                a {
+                    color: $colorSchiefer;
+                    background: $colorSilber;
+                    z-index: 3;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-only(md) {
+    .component-steps {
+        padding: 10px 0px 0px;
+
+        ul {
+            margin: 0px -6px 0px -6px;
+
+            &:after {
+                position: absolute;
+                height: 12px;
+                bottom: -12px;
+                width: calc(100% + 12px);
+                background: $colorSilber;
+                z-index: 20;
+                content: '';
+                left: -6px;
+            }
+
+            li {
+                a {
+                    @include rounded-top(18px);
+                    @include setFontSize($font-size: $fontSize-001);
+                    @include setLineHeight($font-size: $fontSize-001, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                    padding: 12px 12.5px 12px 12.5px;
+                }
+
+                &.active {
+                    a {
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .component-steps {
+        padding: 30px 15px 30px;
+        margin-bottom: 30px;
+        margin-top: 0px;
+
+        ul {
+            flex-wrap: wrap;
+            margin: 0px -6px;
+
+            &:after {
+                display: none;
+            }
+
+            li {
+                margin: 6px 6px;
+
+                &:last-of-type {
+                    margin-right: 6px;
+                }
+
+                &:first-of-type {
+                    margin-left: 6px;
+                }
+
+                a {
+                    @include rounded(20px);
+                    padding: 14px 14px 14px 14px;
+
+                    &:focus-within, &:focus-visible, &:visited, &:focus, &:hover {
+                    }
+                }
+
+                &.active {
+                    a {
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include media-breakpoint-down(sm) {
+    .component-steps {
+        ul {
+            margin: 0px 0px;
+
+            li {
+                margin: 6px 0px;
+                flex: 1 0 100%;
+                display: flex;
+
+                &:last-of-type {
+                    margin-right: 0px;
+                    margin-bottom: 0px;
+                }
+
+                &:first-of-type {
+                    margin-left: 0px;
+                    margin-top: 0px;
+                }
+
+                a {
+                    flex: 1 0 100%;
+                    padding: 14px;
+                }
+            }
+        }
+    }
+}

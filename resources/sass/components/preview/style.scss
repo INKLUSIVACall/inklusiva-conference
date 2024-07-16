@@ -1,0 +1,15 @@
+.preview-display {
+    display: flex;
+    background: $colorHellgrau;
+    padding: 1rem;
+    border-radius: 20px;
+
+    &.icon {
+        width: 5rem;
+        justify-content: center;
+    }
+}
+
+.preview-title {
+    margin: 1rem 0;
+}

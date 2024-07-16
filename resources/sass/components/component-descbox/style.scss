@@ -1,0 +1,131 @@
+//
+// style
+//
+.component-descbox {
+    padding: 0px 15px;
+    margin-bottom: 70px;
+
+    .descbox-content {
+        .title {
+            margin: 70px 0px 30px 0px;
+
+            h1, h2, h3, h4, h5, h6, legend {
+                @include setFontSize($font-size: $fontSize-007);
+                @include setLineHeight($font-size: $fontSize-007, $line-height-multiplikator: $line-height-multiplikator-default);
+                @include setfontFamily($type: medium);
+            }
+        }
+
+        .desc {
+            @include setFontSize($font-size: $fontSize-005);
+            @include setLineHeight($font-size: $fontSize-005, $line-height-multiplikator: $line-height-multiplikator-default);
+
+            ul {
+                margin-top: 1rem;
+                li {
+                }
+            }
+        }
+
+        .help-item {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slot {
+            margin-top: 50px;
+        }
+
+        .row {
+            position: relative;
+
+            [class*='col-'] {
+                position: relative;
+                height: auto;
+            }
+        }
+    }
+
+    &.bordered {
+        .descbox-content {
+            padding-bottom: 60px;
+            border-bottom: 2px solid $colorGrau;
+        }
+    }
+
+    &.bordered-dotted {
+        .descbox-content {
+            padding-bottom: 60px;
+            border-bottom: 4px dotted $colorGrau;
+        }
+    }
+}
+
+.component-descbox-list {
+    .component-descbox:not(:first-of-type) {
+
+        .title {
+            margin-top: 0px;
+        }
+    }
+
+    form {
+        .component-descbox {
+            .title {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .component-descbox {
+        margin-bottom: 60px;
+
+        .descbox-content {
+            .title {
+                margin: 40px 0px 20px 0px;
+
+                h1, h2, h3, h4, h5, h6, legend {
+                    @include setFontSize($font-size: $fontSize-006);
+                    @include setLineHeight($font-size: $fontSize-006, $line-height-multiplikator: $line-height-multiplikator-default);
+                    padding: 0px;
+                    margin: 0px;
+                }
+            }
+
+            .desc {
+                @include setFontSize($font-size: $fontSize-003);
+                @include setLineHeight($font-size: $fontSize-003, $line-height-multiplikator: $line-height-multiplikator-default);
+            }
+
+            .help-item {
+                margin-top: 30px;
+            }
+
+            .slot {
+                margin-top: 40px;
+            }
+
+            .row {
+                [class*='col-'] {
+                }
+            }
+        }
+
+        &.bordered {
+            .descbox-content {
+                padding-bottom: 50px;
+            }
+        }
+
+        &.bordered-dotted {
+            .descbox-content {
+                padding-bottom: 50px;
+            }
+        }
+    }
+}

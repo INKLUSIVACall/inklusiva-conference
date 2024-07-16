@@ -1,0 +1,227 @@
+//
+// settings
+//
+// npm
+@import "settings/npm/custom-bootstrap";
+// fonts
+@import "settings/npm/custom-fontawesome";
+@import "./settings/webfont/init-fontfaces";
+// variables
+@import "./settings/root/variables-colors";
+@import "./settings/root/variables-font-families";
+@import "./settings/root/variables-font-sizes";
+@import "./settings/root/variables-icon-sizes";
+@import "./settings/root/variables-animation-time";
+// mixins
+@import "./settings/root/mixins";
+@import "./settings/root/mixins-font";
+@import "./settings/root/mixins-format";
+
+//
+//  views
+//
+// body
+@import "./views/body/variables";
+@import "./views/body/mixins";
+@import "./views/body/style";
+
+//
+// views: layout
+//
+// default layout
+@import "views/layouts/variables";
+@import "views/layouts/mixins";
+@import "views/layouts/style";
+
+//
+// views: area
+//
+// default area
+@import "views/areas/variables";
+@import "views/areas/mixins";
+@import "views/areas/style";
+// header
+@import "views/areas/header/variables";
+@import "views/areas/header/mixins";
+@import "views/areas/header/style";
+// main
+@import "views/areas/main/variables";
+@import "views/areas/main/mixins";
+@import "views/areas/main/style";
+// main-context
+@import "views/areas/main-context/variables";
+@import "views/areas/main-context/mixins";
+@import "views/areas/main-context/style";
+// main-footer
+@import "views/areas/main-footer/variables";
+@import "views/areas/main-footer/mixins";
+@import "views/areas/main-footer/style";
+// overlay-navigation
+@import "views/areas/overlay-navigation/variables";
+@import "views/areas/overlay-navigation/mixins";
+@import "views/areas/overlay-navigation/style";
+
+//
+//  components
+//
+// component
+@import "components/component/variables";
+@import "components/component/mixins";
+@import "components/component/style";
+// header
+@import "components/header/variables";
+@import "components/header/mixins";
+@import "components/header/style";
+// context
+@import "components/context/variables";
+@import "components/context/mixins";
+@import "components/context/style";
+// formcontrols
+@import "components/formcontrols/variables";
+@import "components/formcontrols/mixins";
+@import "components/formcontrols/style";
+// footer
+@import "components/footer/variables";
+@import "components/footer/mixins";
+@import "components/footer/style";
+// Modal
+@import "components/modal/style";
+// burgermenue
+@import "components/burgermenue/variables";
+@import "components/burgermenue/mixins";
+@import "components/burgermenue/style";
+
+// component descbox
+@import "components/component-overlay-navigation/variables";
+@import "components/component-overlay-navigation/mixins";
+@import "components/component-overlay-navigation/style";
+
+// component form elements
+@import "components/component-form-element/variables";
+@import "components/component-form-element/mixins";
+@import "components/component-form-element/style";
+// component select
+@import "components/component-form-select/variables";
+@import "components/component-form-select/mixins";
+@import "components/component-form-select/style";
+
+// component input text
+@import "components/component-form-input-text/variables";
+@import "components/component-form-input-text/mixins";
+@import "components/component-form-input-text/style";
+
+// component textarea
+@import "components/component-form-input-textarea/variables";
+@import "components/component-form-input-textarea/mixins";
+@import "components/component-form-input-textarea/style";
+
+// component toggle
+@import "components/component-form-toggle/variables";
+@import "components/component-form-toggle/mixins";
+@import "components/component-form-toggle/style";
+
+// component radio
+@import "components/component-form-radio/variables";
+@import "components/component-form-radio/mixins";
+@import "components/component-form-radio/style";
+
+// component slider
+@import "components/component-form-slider/variables";
+@import "components/component-form-slider/mixins";
+@import "components/component-form-slider/style";
+
+// component file
+@import "components/component-form-file/variables";
+@import "components/component-form-file/mixins";
+@import "components/component-form-file/style";
+
+// component border button
+@import "components/component-link-border-button/variables";
+@import "components/component-link-border-button/mixins";
+@import "components/component-link-border-button/style";
+
+// component link text
+@import "components/component-link-text/variables";
+@import "components/component-link-text/mixins";
+@import "components/component-link-text/style";
+
+// component button
+@import "components/component-button/variables";
+@import "components/component-button/mixins";
+@import "components/component-button/style";
+
+// component navigation main
+@import "components/component-navigation-main/variables";
+@import "components/component-navigation-main/mixins";
+@import "components/component-navigation-main/style";
+
+// component descbox
+@import "components/component-descbox/variables";
+@import "components/component-descbox/mixins";
+@import "components/component-descbox/style";
+
+// component progressbox
+@import "components/component-progressbox/variables";
+@import "components/component-progressbox/mixins";
+@import "components/component-progressbox/style";
+
+// component help-icon
+@import "components/component-help-button/variables";
+@import "components/component-help-button/mixins";
+@import "components/component-help-button/style";
+
+// component whitebox
+@import "components/component-whitebox/variables";
+@import "components/component-whitebox/mixins";
+@import "components/component-whitebox/style";
+
+// component message
+@import "components/component-message/variables";
+@import "components/component-message/mixins";
+@import "components/component-message/style";
+
+// component datacollection
+@import "components/component-datacollection/variables";
+@import "components/component-datacollection/mixins";
+@import "components/component-datacollection/style";
+
+// component dashboard
+@import "components/component-dashboard-item/variables";
+@import "components/component-dashboard-item/mixins";
+@import "components/component-dashboard-item/style";
+
+// component steps
+@import "components/component-steps/variables";
+@import "components/component-steps/mixins";
+@import "components/component-steps/style";
+
+// Text & Icon Preview
+@import "components/preview/style";
+
+// Liste mit Meetings
+@import "components/component-meetingbox/style";
+
+// List der Aufzeichnungen
+@import "components/component-recordings/style";
+// Detailansicht einer Aufzeichnung
+@import "components/component-recording-details/style";
+
+// Login Formatierung
+@import "components/component-login/style";
+
+
+// Detailansicht eines Meetings
+@import "components/component-meeting-details/style";
+
+// Tabellenformatierung
+@import "components/component-table/style";
+
+@import "components/functionality/style";
+@import "components/headerfunctions/style";
+
+@import "loader";
+
+@import '/node_modules/@shoelace-style/shoelace/dist/themes/light.css';
+
+
+

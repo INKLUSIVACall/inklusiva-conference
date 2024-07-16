@@ -1,0 +1,205 @@
+//
+// style
+//
+
+.message {
+    &.message-type-text {
+        margin-top: 12px;
+
+        &.error {
+            color: $colorKirsche;
+        }
+
+        &.success {
+            color: $colorBlattgruen;
+        }
+
+        .title {
+            @include setfontFamily($type: medium);
+            @include setFontSize($font-size: $fontSize-002);
+            @include setLineHeight(
+                $font-size: $fontSize-002,
+                $line-height-multiplikator: $line-height-multiplikator-singlerow
+            );
+        }
+    }
+
+    &.message-type-box {
+        color: $colorWhite;
+
+        &.error {
+            .message-area {
+                background-color: $colorKirsche;
+
+                .message-icon {
+                    .icon {
+                        i {
+                            color: $colorKirsche;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.success {
+            .message-area {
+                background-color: $colorBlattgruen;
+
+                .message-icon {
+                    .icon {
+                        i {
+                            color: $colorBlattgruen;
+                        }
+                    }
+                }
+            }
+        }
+
+        .message-area {
+            padding: 40px 40px 40px 40px;
+            @include rounded(20px);
+            &:focus-within,
+            &:focus-visible,
+            &:focus,
+            &:hover {
+                outline-width: 12px;
+                outline-style: solid;
+                outline-offset: 0px;
+                color: $colorWhite;
+                outline-color: $colorOutline;
+                z-index: 2;
+            }
+
+            .message-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .icon {
+                    width: 80px;
+                    height: 80px;
+                    @include rounded(50%);
+                    background: $colorWhite;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        font-size: 3.125rem;
+                    }
+                }
+            }
+
+            .title {
+                @include setfontFamily($type: medium);
+                @include setFontSize($font-size: $fontSize-006);
+                @include setLineHeight(
+                    $font-size: $fontSize-006,
+                    $line-height-multiplikator:
+                        $line-height-multiplikator-singlerow
+                );
+                margin-top: 0px;
+            }
+
+            .desc {
+                margin-top: 20px;
+                @include setFontSize($font-size: $fontSize-003);
+                @include setLineHeight(
+                    $font-size: $fontSize-003,
+                    $line-height-multiplikator:
+                        $line-height-multiplikator-default
+                );
+
+                ul {
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .message {
+        padding: 0px 15px;
+
+        &.message-type-text {
+            &.error {
+            }
+
+            &.success {
+            }
+
+            .title {
+                @include setFontSize($font-size: $fontSize-002);
+                @include setLineHeight(
+                    $font-size: $fontSize-002,
+                    $line-height-multiplikator:
+                        $line-height-multiplikator-singlerow
+                );
+            }
+        }
+
+        &.message-type-box {
+            &.error {
+                .message-area {
+                    .message-icon {
+                        .icon {
+                            i {
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.success {
+                .message-area {
+                    .message-icon {
+                        .icon {
+                            i {
+                            }
+                        }
+                    }
+                }
+            }
+
+            .message-area {
+                // margin-left: -15px;
+                //width: calc(100% + 30px);
+                padding: 40px 30px 40px 30px;
+                // @include rounded(0px);
+
+                .message-icon {
+                    margin-bottom: 20px;
+
+                    .icon {
+                        width: 60px;
+                        height: 60px;
+
+                        i {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+
+                .title {
+                    @include setfontFamily($type: medium);
+                    @include setFontSize($font-size: $fontSize-004);
+                    @include setLineHeight(
+                        $font-size: $fontSize-004,
+                        $line-height-multiplikator:
+                            $line-height-multiplikator-singlerow
+                    );
+                }
+
+                .desc {
+                    @include setFontSize($font-size: $fontSize-002);
+                    @include setLineHeight(
+                        $font-size: $fontSize-002,
+                        $line-height-multiplikator:
+                            $line-height-multiplikator-default
+                    );
+                }
+            }
+        }
+    }
+}

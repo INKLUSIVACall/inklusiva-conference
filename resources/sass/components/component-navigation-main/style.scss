@@ -1,0 +1,183 @@
+//
+// style
+//
+header {
+    .component-navigation-main {
+        position: relative;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+
+        li {
+            position: relative;
+            padding: 4px 7px 4px 7px;
+
+            &:first-of-type {
+                padding-left: 0px;
+            }
+
+            &:last-of-type {
+                padding-right: 0px;
+            }
+
+            &.header-unvisible{
+              display: none;
+            }
+
+            form{
+                display: inline-grid;
+            }
+
+            a {
+                position: relative;
+                @include setFontSize($font-size: $fontSize-002);
+                @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                color: $colorSchiefer;
+                text-decoration: none;
+                padding: 4px 4px 4px 24px;
+                white-space: nowrap;
+
+                &:before {
+                    position: absolute;
+                    left: 4px;
+                    top: 0px;
+                    width: 16px;
+                    height: 35px;
+                    content: "\f078";
+                    font-family: 'Font Awesome 6 Free';
+                    font-weight: 900;
+                    color: $colorSchiefer;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &:only-child {
+                    padding-left: 4px;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+
+
+                &:hover {
+                    color: $colorJohannisbeere;
+
+                    &:before {
+                        color: $colorJohannisbeere;
+                    }
+                }
+            }
+
+            .as-navigation {
+                position: relative;
+                @include setFontSize($font-size: $fontSize-002);
+                @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+                color: $colorSchiefer;
+                text-decoration: none;
+                padding: 4px 4px 4px 4px;
+                white-space: nowrap;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+                i {
+                    width: 16px;
+                    font-family: 'Font Awesome 6 Free';
+                    font-weight: 900;
+                    color: $colorSchiefer;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 6px;
+                }
+
+                &:hover {
+                    color: $colorJohannisbeere;
+
+                    i {
+                        color: $colorJohannisbeere;
+                    }
+                }
+            }
+
+            &.li-active{
+                > a{
+                    color: $colorJohannisbeere;
+
+                    &:before {
+                        color: $colorJohannisbeere;
+                    }
+                }
+
+                > .as-navigation {
+                    color: $colorJohannisbeere;
+                    i{
+                        color: $colorJohannisbeere;
+                    }
+                }
+            }
+
+            > ul {
+                position: absolute;
+                top: 45px;
+                right: 0px;
+                width: auto;
+                display: none;
+                flex-direction: column;
+                background: $colorWhite;
+                @include element_shadow($positionhorizontal: 3px, $positionvertical: 3px, $spread: 0px, $blur: 0px, $color: $colorDunkelgrau);
+                padding: 26px 56px 26px 26px;
+
+                li {
+                    flex: 1 1 auto;
+                    padding: 4px 0px 4px 0px;
+
+                    a {
+                        padding: 4px 4px 4px 4px;
+                    }
+
+                    &.li-active{
+                        > a{
+                            color: $colorJohannisbeere;
+
+                            &:before {
+                                color: $colorJohannisbeere;
+                            }
+                        }
+
+                        > .as-navigation {
+                            color: $colorJohannisbeere;
+                            i{
+                                color: $colorJohannisbeere;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.li-open {
+                > a {
+                    color: $colorJohannisbeere;
+
+                    &:before {
+                        color: $colorJohannisbeere;
+                    }
+                }
+
+                > ul {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+

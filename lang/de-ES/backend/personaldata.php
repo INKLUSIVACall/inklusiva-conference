@@ -1,0 +1,47 @@
+<?php
+
+return [
+    'index.pagetitle' => 'Persönliche Daten',
+    'index.successTitle' => 'Das hat funktioniert! Sie haben Ihre persönlichen Daten jetzt gespeichert.',
+    'index.whitebox.title' => 'Persönliche Daten',
+    'index.whitebox.format' => 'h1',
+    'index.whitebox.ariaLabel' => 'Persönliche Daten',
+    'index.datacollection.headline' => 'Daten, die gerade gespeichert sind:',
+    'index.datacollection.linkTitle' => 'Persönliche Daten ändern',
+    'index.updateData.successful' => 'Das hat funktioniert: Ihre persönlichen Daten sind jetzt geändert.',
+
+    'edit.pagetitle' => 'Persönliche Daten ändern',
+    'edit.whitebox.title' => 'Persönliche Daten ändern',
+    'edit.whitebox.format' => 'h1',
+    'edit.whitebox.ariaLabel' => 'Persönliche Daten ändern',
+    'edit.input.name' => 'Name',
+    'edit.input.namePlaceholder' => 'Bitte geben Sie hier einen Namen ein',
+    'edit.input.occupationName' => 'So will ich INKLUSIVA Call nutzen',
+    'edit.input.occupationDesc' => '',
+    'edit.input.occupationValuePrivate' => 'Privat',
+    'edit.input.occupationValueOrganisation' => 'Als Organisator von Gruppen oder Vereinen von und für Menschen mit Behinderungen oder chronischen Krankheiten. Oder als Organisator, der inklusive Veranstaltungen im Internet machen will',
+    'edit.input.nameOrganisation' => 'Name von Ihrer Gruppe oder von Ihrem Verein',
+    'edit.input.nameOrganisationPlaceholdder' => 'Bitte geben Sie den Namen von Ihrer Gruppe oder von Ihrem Verein ein.',
+    'edit.button.cancel' => 'abbrechen',
+    'edit.button.save' => 'Persönliche Daten ändern',
+
+    'updateEmail.error.email.required' => 'Bitte geben Sie eine E-Mail-Adresse ein.',
+    'updateEmail.error.email.unique' => 'Problem: Diese E-Mail-Adresse wird schon von jemand anderem benutzt. Wir können Sie deshalb nicht eintragen.',
+    'updateEmail.error.email.email' => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+    'updateEmail.error.emailconfirm.required' => 'Bitte bestätigen Sie die E-Mail-Adresse.',
+    'updateEmail.error.emailconfirm.same' => 'Problem: Die E-Mail-Adressen sind nicht gleich.',
+    'updateEmail.success' => 'Wir haben Ihre neue E-Mail-Adresse gespeichert. Zur Bestätigung der neuen E-Mail haben wir eine PIN an diese Adresse geschickt. Bitte schauen Sie in Ihr E-Mail-Postfach nach der PIN. Klicken Sie dann auf "E-Mail bestätigen".',
+
+    'confirmEmail.error.pin.required' => 'Bitte tragen Sie hier die PIN ein.',
+    'confirmEmail.error.pin.numeric' => 'Problem: Die PIN stimmt nicht. Sie darf nur aus Zahlen bestehen.',
+    'confirmEmail.error.wrongPin' => 'Problem: Die PIN stimmt leider nicht. Bitte schauen Sie die PIN nochmal nach.',
+    'confirmEmail.success' => 'Das hat funktioniert! Die E-Mail-Adresse ist geändert.',
+    'confirmEmail.resendPin.success' => 'Wir haben die PIN nochmal an Ihre E-Mail-Adresse geschickt. Bitte schauen Sie in Ihr E-Mail-Postfach nach der neuen PIN. Klicken Sie dann auf "E-Mail bestätigen".',
+
+    'updatePassword.error.current_password.required' => 'Bitte geben Sie Ihr jetziges Passwort ein.',
+    'updatePassword.error.current_password.current_password' => 'Das Passwort stimmt nicht.',
+    'updatePassword.error.new_password.required' => 'Bitte geben Sie ein neues Passwort ein.',
+    'updatePassword.error.new_password.confirmed' => 'Problem: Die Passwörter sind nicht gleich.',
+    'updatePassword.error.new_password_confirmation.required' => 'Bitte geben Sie das neue Passwort nochmal ein',
+    'updatePassword.success' => 'Das hat funktioniert! Sie haben Passwort jetzt geändert.',
+];

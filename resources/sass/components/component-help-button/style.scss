@@ -1,0 +1,99 @@
+//
+// style
+//
+.help-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    .help-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        background: $colorHellgrau;
+        @include rounded(50%);
+
+        i {
+            color: $colorSchiefer;
+            @include setFontSize($font-size: 3rem);
+            @include setLineHeight(
+                $font-size: 3rem,
+                $line-height-multiplikator: $line-height-multiplikator-singlerow
+            );
+        }
+    }
+
+    .help-title {
+        margin-top: 12px;
+
+        color: $colorSchiefer;
+        @include setFontSize($font-size: $fontSize-001);
+        @include setLineHeight(
+            $font-size: $fontSize-001,
+            $line-height-multiplikator: $line-height-multiplikator-singlerow
+        );
+    }
+
+    &:hover {
+        .help-icon {
+            background: $colorJohannisbeere;
+
+            i {
+                color: $colorWhite;
+            }
+        }
+
+        .help-title {
+            color: $colorJohannisbeere;
+            @include setFontSize($font-size: $fontSize-001);
+            @include setLineHeight(
+                $font-size: $fontSize-001,
+                $line-height-multiplikator: $line-height-multiplikator-singlerow
+            );
+        }
+    }
+}
+
+#help_button {
+    .modal-dialog {
+        width: calc(100% - 5rem);
+        height: 96vh;
+        padding: 0;
+        margin-top: 1.5rem;
+        max-width: unset;
+        margin: 2.5rem;
+
+        .modal-header {
+            height: 50px;
+            padding: 30px 30px 30px 30px;
+            font-size: 1.5rem;
+
+            .btn-close {
+                position: relative;
+                span {
+                    position: absolute;
+                    top: 3px;
+                    right: 56px;
+                    color: $colorSchiefer;
+                }
+            }
+            .modal-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        .modal-body {
+            padding: 0px 20px 30px 2px;
+        }
+
+        .help-modal {
+            min-height: 80vh;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,164 @@
+//
+//  variables
+//
+
+//
+//  display and position attributes
+//
+
+// position
+$area_Overlay_Navigation_Position_XXL: fixed;
+$area_Overlay_Navigation_Position_XL: fixed;
+$area_Overlay_Navigation_Position_LG: fixed;
+$area_Overlay_Navigation_Position_MD: fixed;
+$area_Overlay_Navigation_Position_SM: fixed;
+$area_Overlay_Navigation_Position_XS: fixed;
+
+//  z-index
+$area_Overlay_Navigation_ZIndex_XXL: 10;
+$area_Overlay_Navigation_ZIndex_XL: 10;
+$area_Overlay_Navigation_ZIndex_LG: 10;
+$area_Overlay_Navigation_ZIndex_MD: 10;
+$area_Overlay_Navigation_ZIndex_SM: 10;
+$area_Overlay_Navigation_ZIndex_XS: 10;
+
+
+
+
+//
+//  positioning attributes
+//
+
+// left
+$area_Overlay_Navigation_Left_XXL: auto;
+$area_Overlay_Navigation_Left_XL: auto;
+$area_Overlay_Navigation_Left_LG: auto;
+$area_Overlay_Navigation_Left_MD: auto;
+$area_Overlay_Navigation_Left_SM: auto;
+$area_Overlay_Navigation_Left_XS: auto;
+
+// right
+$area_Overlay_Navigation_Right_XXL: 0px;
+$area_Overlay_Navigation_Right_XL: 0px;
+$area_Overlay_Navigation_Right_LG: 0px;
+$area_Overlay_Navigation_Right_MD: 0px;
+$area_Overlay_Navigation_Right_SM: 0px;
+$area_Overlay_Navigation_Right_XS: 0px;
+
+// top
+$area_Overlay_Navigation_Top_XXL: 0px;
+$area_Overlay_Navigation_Top_XL: 0px;
+$area_Overlay_Navigation_Top_LG: 0px;
+$area_Overlay_Navigation_Top_MD: 0px;
+$area_Overlay_Navigation_Top_SM: 0px;
+$area_Overlay_Navigation_Top_XS: 0px;
+
+// bottom
+$area_Overlay_Navigation_Bottom_XXL: auto;
+$area_Overlay_Navigation_Bottom_XL: auto;
+$area_Overlay_Navigation_Bottom_LG: auto;
+$area_Overlay_Navigation_Bottom_MD: auto;
+$area_Overlay_Navigation_Bottom_SM: auto;
+$area_Overlay_Navigation_Bottom_XS: auto;
+
+// width
+$area_Overlay_Navigation_Width_XXL: 50%;
+$area_Overlay_Navigation_Width_XL: 50%;
+$area_Overlay_Navigation_Width_LG: 100%;
+$area_Overlay_Navigation_Width_MD: 100%;
+$area_Overlay_Navigation_Width_SM: 100%;
+$area_Overlay_Navigation_Width_XS: 100%;
+
+// height
+$area_Overlay_Navigation_Height_XXL: 100vh;
+$area_Overlay_Navigation_Height_XL: 100vh;
+$area_Overlay_Navigation_Height_LG: 100vh;
+$area_Overlay_Navigation_Height_MD: 100vh;
+$area_Overlay_Navigation_Height_SM: 100vh;
+$area_Overlay_Navigation_Height_XS: 100vh;
+
+// height scrolled
+$area_Overlay_Navigation_Height_Scrolled_XXL: 100vh;
+$area_Overlay_Navigation_Height_Scrolled_XL: 100vh;
+$area_Overlay_Navigation_Height_Scrolled_LG: 100vh;
+$area_Overlay_Navigation_Height_Scrolled_MD: 100vh;
+$area_Overlay_Navigation_Height_Scrolled_SM: 100vh;
+$area_Overlay_Navigation_Height_Scrolled_XS: 100vh;
+
+
+
+
+
+//
+//  control attributes
+//
+
+// hide
+$area_Overlay_Navigation_Hide_XXL: true;
+$area_Overlay_Navigation_Hide_XL: true;
+$area_Overlay_Navigation_Hide_LG: true;
+$area_Overlay_Navigation_Hide_MD: true;
+$area_Overlay_Navigation_Hide_SM: true;
+$area_Overlay_Navigation_Hide_XS: true;
+
+// animation type (fade, direction)
+$area_Overlay_Navigation_Anim_Type_XXL: fade;
+$area_Overlay_Navigation_Anim_Type_XL: fade;
+$area_Overlay_Navigation_Anim_Type_LG: fade;
+$area_Overlay_Navigation_Anim_Type_MD: fade;
+$area_Overlay_Navigation_Anim_Type_SM: fade;
+$area_Overlay_Navigation_Anim_Type_XS: fade;
+
+// animation attribute
+$area_Overlay_Navigation_Anim_Attribute_XXL: opacity;
+$area_Overlay_Navigation_Anim_Attribute_XL: opacity;
+$area_Overlay_Navigation_Anim_Attribute_LG: opacity;
+$area_Overlay_Navigation_Anim_Attribute_MD: opacity;
+$area_Overlay_Navigation_Anim_Attribute_SM: opacity;
+$area_Overlay_Navigation_Anim_Attribute_XS: opacity;
+
+// animation time
+$area_Overlay_Navigation_Anim_Time_XXL: $animationTime;
+$area_Overlay_Navigation_Anim_Time_XL: $animationTime;
+$area_Overlay_Navigation_Anim_Time_LG: $animationTime;
+$area_Overlay_Navigation_Anim_Time_MD: $animationTime;
+$area_Overlay_Navigation_Anim_Time_SM: $animationTime;
+$area_Overlay_Navigation_Anim_Time_XS: $animationTime;
+
+
+
+//
+//  after element attributes
+//
+
+// after element
+$area_Overlay_Navigation_After_Element_XXL: false;
+$area_Overlay_Navigation_After_Element_XL: false;
+$area_Overlay_Navigation_After_Element_LG: false;
+$area_Overlay_Navigation_After_Element_MD: false;
+$area_Overlay_Navigation_After_Element_SM: false;
+$area_Overlay_Navigation_After_Element_XS: false;
+
+// background-color
+$area_Overlay_Navigation_After_BG_Color_XXL: $colorBlack;
+$area_Overlay_Navigation_After_BG_Color_XL: $colorBlack;
+$area_Overlay_Navigation_After_BG_Color_LG: $colorBlack;
+$area_Overlay_Navigation_After_BG_Color_MD: $colorBlack;
+$area_Overlay_Navigation_After_BG_Color_SM: $colorBlack;
+$area_Overlay_Navigation_After_BG_Color_XS: $colorBlack;
+
+// transparency
+$area_Overlay_Navigation_After_Transparency_XXL: 0.05;
+$area_Overlay_Navigation_After_Transparency_XL: 0.05;
+$area_Overlay_Navigation_After_Transparency_LG: 0.05;
+$area_Overlay_Navigation_After_Transparency_MD: 0.05;
+$area_Overlay_Navigation_After_Transparency_SM: 0.05;
+$area_Overlay_Navigation_After_Transparency_XS: 0.05;
+
+// transparency
+$area_Overlay_Navigation_After_Zindex_XXL: 2;
+$area_Overlay_Navigation_After_Zindex_XL: 2;
+$area_Overlay_Navigation_After_Zindex_LG: 2;
+$area_Overlay_Navigation_After_Zindex_MD: 2;
+$area_Overlay_Navigation_After_Zindex_SM: 2;
+$area_Overlay_Navigation_After_Zindex_XS: 2;

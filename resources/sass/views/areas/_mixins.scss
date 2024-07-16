@@ -1,0 +1,214 @@
+//
+//  mixins
+//
+@mixin buildAfterElement(
+  $after-element-xxl: false, $after-element-xl: false, $after-element-lg: false, $after-element-md: false, $after-element-sm: false, $after-element-xs: false,
+  $background-color-after-xxl: black, $background-color-after-xl: black, $background-color-after-lg: black, $background-color-after-md: black, $background-color-after-sm: black, $background-color-after-xs: black,
+  $transparency-after-xxl: 0.2, $transparency-after-xl: 0.2, $transparency-after-lg: 0.2, $transparency-after-md: 0.2, $transparency-after-sm: 0.2, $transparency-after-xs: 0.2,
+  $z-index-after-xxl: 0, $z-index-after-xl: 0, $z-index-after-lg: 0, $z-index-after-md: 0, $z-index-after-sm: 0, $z-index-after-xs: 0
+) {
+  @include media-breakpoint-only(xxl) {
+    @if $after-element-xxl {
+      &:after {
+        position: fixed;
+        content: '';
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: $background-color-after-xxl;
+        z-index: $z-index-after-xxl;
+        @include transparent($transparency-after-xxl);
+      }
+    }
+  }
+
+  @include media-breakpoint-only(xl) {
+    @if $after-element-xl {
+      &:after {
+        position: fixed;
+        content: '';
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: $background-color-after-xl;
+        z-index: $z-index-after-xl;
+        @include transparent($transparency-after-xl);
+      }
+    }
+  }
+
+  @include media-breakpoint-only(lg) {
+    @if $after-element-lg {
+      &:after {
+        position: fixed;
+        content: '';
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: $background-color-after-lg;
+        z-index: $z-index-after-lg;
+        @include transparent($transparency-after-lg);
+      }
+    }
+  }
+
+  @include media-breakpoint-only(md) {
+    @if $after-element-md {
+      &:after {
+        position: fixed;
+        content: '';
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: $background-color-after-md;
+        z-index: $z-index-after-md;
+        @include transparent($transparency-after-md);
+      }
+    }
+  }
+
+  @include media-breakpoint-only(sm) {
+    @if $after-element-sm {
+      &:after {
+        position: fixed;
+        content: '';
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: $background-color-after-sm;
+        z-index: $z-index-after-sm;
+        @include transparent($transparency-after-sm);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    @if $after-element-xs {
+      &:after {
+        position: fixed;
+        content: '';
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: $background-color-after-xs;
+        z-index: $z-index-after-xs;
+        @include transparent($transparency-after-xs);
+      }
+    }
+  }
+}
+
+@mixin controlArea(
+  $width-xxl: auto,$width-xl: auto,$width-lg: auto,$width-md: auto,$width-sm: auto,$width-xs: auto,
+  $height-xxl: auto,$height-xl: auto,$height-lg: auto,$height-md: auto,$height-sm: auto,$height-xs: auto,
+  $top-xxl: auto,$top-xl: auto,$top-lg: auto,$top-md: auto,$top-sm: auto,$top-xs: auto,
+  $bottom-xxl: auto,$bottom-xl: auto,$bottom-lg: auto,$bottom-md: auto,$bottom-sm: auto,$bottom-xs: auto,
+  $left-xxl: auto,$left-xl: auto,$left-lg: auto,$left-md: auto,$left-sm: auto,$left-xs: auto,
+  $right-xxl: auto,$right-xl: auto,$right-lg: auto,$right-md: auto,$right-sm: auto,$right-xs: auto,
+  $hide-xxl: false,$hide-xl: false, $hide-lg: false, $hide-md: false, $hide-sm: false, $hide-xs: false,
+  $after-element-xxl: false,$after-element-xl: false, $after-element-lg: false, $after-element-md: false, $after-element-sm: false, $after-element-xs: false,
+  $anim-type-xxl: direction,$anim-type-xl: direction,$anim-type-lg: direction,$anim-type-md: direction,$anim-type-sm: direction,$anim-type-xs: direction,
+  $anim-attribute-xxl: left,$anim-attribute-xl: left,$anim-attribute-lg: left,$anim-attribute-md: left,$anim-attribute-sm: left,$anim-attribute-xs: left,
+  $anim-time-xxl: 500ms,$anim-time-xl: 500ms,$anim-time-lg: 500ms,$anim-time-md: 500ms,$anim-time-sm: 500ms,$anim-time-xs: 500ms,
+) {
+  @include media-breakpoint-only(xxl) {
+    @if $hide-xxl {
+      @include hideArea($viewport: 'xxl', $width: $width-xxl, $height: $height-xxl, $top: $top-xxl, $bottom: $bottom-xxl, $left: $left-xxl, $right: $right-xxl, $anim-type: $anim-type-xxl, $anim-attribute: $anim-attribute-xxl, $anim-time: $anim-time-xxl, $after-element: $after-element-xxl);
+    }
+  }
+
+  @include media-breakpoint-only(xl) {
+    @if $hide-xl {
+      @include hideArea($viewport: 'xl', $width: $width-xl, $height: $height-xl, $top: $top-xl, $bottom: $bottom-xl, $left: $left-xl, $right: $right-xl, $anim-type: $anim-type-xl, $anim-attribute: $anim-attribute-xl, $anim-time: $anim-time-xl, $after-element: $after-element-xl);
+    }
+  }
+
+  @include media-breakpoint-only(lg) {
+    @if $hide-lg {
+      @include hideArea($viewport: 'lg', $width: $width-lg, $height: $height-lg, $top: $top-lg, $bottom: $bottom-lg, $left: $left-lg, $right: $right-lg, $anim-type: $anim-type-lg, $anim-attribute: $anim-attribute-lg, $anim-time: $anim-time-lg, $after-element: $after-element-lg);
+    }
+  }
+
+  @include media-breakpoint-only(md) {
+    @if $hide-md {
+      @include hideArea($viewport: 'md', $width: $width-md, $height: $height-md, $top: $top-md, $bottom: $bottom-md, $left: $left-md, $right: $right-md, $anim-type: $anim-type-md, $anim-attribute: $anim-attribute-md, $anim-time: $anim-time-md, $after-element: $after-element-md);
+    }
+  }
+
+  @include media-breakpoint-only(sm) {
+    @if $hide-sm {
+      @include hideArea($viewport: 'sm', $width: $width-sm, $height: $height-sm, $top: $top-sm, $bottom: $bottom-sm, $left: $left-sm, $right: $right-sm, $anim-type: $anim-type-sm, $anim-attribute: $anim-attribute-sm, $anim-time: $anim-time-sm, $after-element: $after-element-sm);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    @if $hide-xs {
+      @include hideArea($viewport: 'xs', $width: $width-xs, $height: $height-xs, $top: $top-xs, $bottom: $bottom-xs, $left: $left-xs, $right: $right-xs, $anim-type: $anim-type-xs, $anim-attribute: $anim-attribute-xs, $anim-time: $anim-time-xs, $after-element: $after-element-xs);
+    }
+  }
+}
+
+@mixin hideArea($viewport, $anim-type, $anim-attribute, $anim-time, $width, $height, $top, $bottom, $left, $right, $after-element) {
+  &.hide-#{$viewport} {
+    //
+    // animate direction
+    //
+    @if $anim-type == 'direction' {
+      $anim-value: auto;
+
+      @if $anim-attribute == 'left' or $anim-attribute == 'right' {
+        $anim-value: $width;
+      }
+      @if $anim-attribute == 'top' or $anim-attribute == 'bottom' {
+        $anim-value: $height;
+      }
+
+      @if $anim-value == auto {
+        $anim-value: 100vh;
+      }
+      #{$anim-attribute}: calc(#{$anim-value} * -1);
+    }
+
+    //
+    // animate fade
+    //
+    @if $anim-type == 'fade' {
+      @include transparent(0);
+      width: 0px;
+      &.activeAnimation {
+        width: $width;
+      }
+    }
+
+    //
+    // animate width
+    //
+    @if $anim-type == 'width' {
+      #{$anim-attribute}: 0px;
+    }
+
+    @if $after-element {
+      &:after {
+        height: 0%;
+        @include transparent(0);
+      }
+    }
+  }
+
+  &.activeAnimation {
+    @include anim($time: $anim-time, $attribute: #{$anim-attribute});
+
+    @if $after-element {
+      &:after {
+        height: 100%;
+        @include anim($time: $anim-time, $attribute: opacity);
+      }
+    }
+  }
+}

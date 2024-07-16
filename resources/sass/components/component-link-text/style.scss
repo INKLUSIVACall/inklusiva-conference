@@ -1,0 +1,73 @@
+//
+// style
+//
+.component-textlink {
+    @include setFontSize($font-size: $fontSize-002);
+    @include setLineHeight($font-size: $fontSize-002, $line-height-multiplikator: $line-height-multiplikator-singlerow);
+    color: $colorSchiefer;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    text-decoration: none;
+
+    .icon {
+        margin-right: 10px;
+    }
+
+    .title {
+        display: inline-block;
+    }
+
+    &.invert {
+        color: $colorWhite;
+    }
+
+    &:hover, &:focus {
+        color: $colorKomplementaerBright;
+
+        .title {
+            text-decoration: underline;
+        }
+    }
+
+    &:hover, &:focus {
+        color: $colorJohannisbeere;
+    }
+
+    &.invert {
+        &:hover {
+            color: $colorKomplementaerBright;
+        }
+    }
+}
+
+.component-textlink-list-wb{
+    a{
+        margin-top:12px;
+    }
+
+    &:first-of-type{
+        margin-top:50px;
+    }
+}
+
+
+.component-textlink-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    li {
+        padding: 10px 0px;
+
+        &:first-of-type {
+            padding-top: 0px;
+        }
+
+        &:last-of-type {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+

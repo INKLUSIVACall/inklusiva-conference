@@ -1,0 +1,229 @@
+//
+// mixin defaults
+//
+@mixin element_shadow($positionhorizontal: 0px, $positionvertical: 10px, $spread: 2px, $blur: 2px, $color: transparentize($colorBlack, 0.7)) {
+  -moz-box-shadow: $positionhorizontal $positionvertical $spread $blur $color;
+  -webkit-box-shadow: $positionhorizontal $positionvertical $spread $blur $color;
+  box-shadow: $positionhorizontal $positionvertical $spread $blur $color;
+}
+
+@mixin element_shadow_inset($positionhorizontal: 0px, $positionvertical: -3px, $positionverticalMoz: -3x, $spread: 3px, $spreadMoz: 3px, $blur: -3px, $blurMoz: -3px, $color:transparentize($colorBlack, 0.85)) {
+  -moz-box-shadow: inset $positionhorizontal $positionverticalMoz $spreadMoz $blurMoz $color;
+  -webkit-box-shadow: inset $positionhorizontal $positionvertical $spread $blur $color;
+  box-shadow: inset $positionhorizontal $positionverticalMoz $spreadMoz $blurMoz $color;
+}
+
+@mixin element_no_shadow() {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+@mixin gradient($startcolor: black, $endcolor: red) {
+  background: $startcolor; /* Old browsers */
+  background: -moz-linear-gradient(left, $startcolor 0%, $endcolor 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, $startcolor 0%, $endcolor 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, $startcolor 0%, $endcolor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$startcolor, endColorstr=$endcolor, GradientType=1); /* IE6-9 */
+}
+
+@mixin gradientinput($startcolor: #f6f6f6, $endcolor: #eaeaea, $gradientstart: 84%) {
+  background: $startcolor;
+  background: -moz-linear-gradient(top, $startcolor $gradientstart, $endcolor 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($gradientstart, $startcolor), color-stop(100%, $endcolor)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $startcolor $gradientstart, $endcolor 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $startcolor $gradientstart, $endcolor 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $startcolor $gradientstart, $endcolor 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $startcolor $gradientstart, $endcolor 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$startcolor, endColorstr=$endcolor, GradientType=0); /* IE6-9 */
+}
+
+@mixin hovergradient() {
+  background: -moz-linear-gradient(top, rgba(30, 87, 153, 0) 0%, rgba(255, 255, 255, 1) 42%, rgba(255, 255, 255, 1) 66%, rgba(125, 185, 232, 0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(30, 87, 153, 0) 0%, rgba(255, 255, 255, 1) 42%, rgba(255, 255, 255, 1) 66%, rgba(125, 185, 232, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, rgba(255, 255, 255, 1) 42%, rgba(255, 255, 255, 1) 66%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001e5799', endColorstr='#007db9e8', GradientType=0); /* IE6-9 */
+}
+
+@mixin transparent($value: 0.5) {
+  filter: alpha(opacity=$value*100);
+  -moz-opacity: $value;
+  -khtml-opacity: $value;
+  opacity: $value;
+}
+
+$radius_default: 5px;
+
+@mixin rounded($radius : $radius_default) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -khtml-border-radius: $radius;
+}
+
+@mixin rounded-top($radius: $radius_default) {
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin rounded-bottom($radius: $radius_default) {
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin rounded-left($radius: $radius_default) {
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin rounded-right($radius: $radius_default) {
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin rotate($value: 45deg) {
+  -webkit-transform: rotate($value);
+  -moz-transform: rotate($value);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  -o-transform: rotate($value);
+  -ms-transform: rotate($value);
+  transform: rotate($value);
+}
+
+@mixin anim($time: 550ms, $delay: 0ms, $ease: ease, $attribute: all) {
+  -webkit-transition: $attribute $time $ease;
+  -moz-transition: $attribute $time $ease;
+  -ms-transition: $attribute $time $ease;
+  -o-transition: $attribute $time $ease;
+  transition: $attribute $time $ease;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}
+
+@mixin setColumn($column: 3){
+  columns: $column;
+  -webkit-columns: $column;
+  -moz-columns: $column;
+}
+
+@mixin antialiased() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin notselectable() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin nooutlines() {
+  outline: 0;
+  -moz-outline: 0;
+}
+
+@mixin hyphen() {
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin setPlaceholder($color: $colorCIGrey-60, $fontWeight: $fontWeight-DefaultLight, $fontSize: 0.95rem) {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    font-style: italic;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    font-style: italic;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    font-style: italic;
+  }
+}
+
+
+@mixin preventLineBreak() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin setTextEllipsis($maxWidth: auto) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: $maxWidth;
+}
+
+@mixin dontBreakOut() {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin setInactive() {
+  @include transparent(0.5);
+  cursor: not-allowed;
+}
+
+@mixin appearance($value: none) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+@mixin focuseffect($padding: 4px 4px 4px 4px, $rounded: 8px){
+  padding: $padding;
+  @include rounded($rounded);
+
+  outline-width: 0px;
+  outline-color: rgba(var(--color-focuswithin), 0);
+  outline-style: solid;
+  outline-offset: 0px;
+  border-color: var(--color-text);
+  @include anim($time: 110ms, $delay: 0ms, $ease: ease);
+
+  &:focus-visible{
+    outline-width: 10px;
+    outline-color: rgba(var(--color-focuswithin), 0.35);
+    outline-style: solid;
+    outline-offset: 0px;
+    border-color: var(--color-text);
+  }
+}

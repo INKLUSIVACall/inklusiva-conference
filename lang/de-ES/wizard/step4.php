@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'progressbox.title'                     => 'Einstellungen zum Thema Sehen',
+    'descbox.format'                        => 'h1',
+    'descbox.ariaLabel'                     => 'Einstellungen zum Thema Sehen',
+    'descbox.helpLink'                      => 'javascript:void(0)',
+    'descbox.title'                         => 'Einstellungen zum Thema Sehen',
+    'descbox.desc'                          => 'Auf dieser Seite können Sie einstellen, wie das Meeting und die Videos aussehen sollen.',
+    'whitebox1.format'                      => 'h2',
+    'whitebox1.ariaLabel'                   => 'Aussehen des Meetings',
+    'whitebox1.title'                       => 'Aussehen des Meetings',
+    'ui.fontSize.label'                     => 'Schrift-Größe im Meeting',
+    'ui.iconSize.label'                     => 'Größe von Symbolen im Meeting',
+    'ui.visualCues.label'                   => 'Sichtbare Hinweise',
+    'ui.visualCues.description'             => 'Wenn Sie diesen Schalter einschalten, bekommen Sie im Meeting Hinweise und Nachrichten, die Sie sehen können.',
+    'whitebox2.format'                      => 'h2',
+    'whitebox2.title'                       => 'So sollen die Videos der Teilnehmer aussehen',
+    'whitebox2.ariaLabel'                   => 'So sollen die Videos der Teilnehmer aussehen',
+    'video_otherParticipants.label'         => 'Videos der Teilnehmer',
+    'video_otherParticipants.description'   => 'Schalten Sie diesen Schalter ein, um die Videos der Teilnehmer in Form von Kacheln anzuzeigen. Wenn der Schalter auf "aus" steht, sehen Sie die Videos der Teilnehmer nicht.',
+    'contrast.label'                        => 'Kontrast',
+    'brightness.label'                      => 'Helligkeit',
+    'dimming.label'                         => 'Kacheln dimmen',
+    'saturation.label'                      => 'Farb-Sättigung',
+    'zoom.label'                            => 'alle Videos in den Kacheln heran-zoomen',
+];

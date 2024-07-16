@@ -1,0 +1,47 @@
+<?php
+
+return [
+    'index.pagetitle' => 'Persönliche Daten',
+    'index.successTitle' => 'Erfolg! Sie haben Ihre persönlichen Daten gespeichert!',
+    'index.whitebox.title' => 'Persönliche Daten',
+    'index.whitebox.format' => 'h1',
+    'index.whitebox.ariaLabel' => 'Persönliche Daten',
+    'index.datacollection.headline' => 'Gespeicherte Angaben',
+    'index.datacollection.linkTitle' => 'Persönliche Daten ändern',
+    'index.updateData.successful' => 'Sie haben Ihre Daten erfolgreich geändert.',
+
+    'edit.pagetitle' => 'Persönliche Daten ändern',
+    'edit.whitebox.title' => 'Persönliche Daten ändern',
+    'edit.whitebox.format' => 'h1',
+    'edit.whitebox.ariaLabel' => 'Persönliche Daten ändern',
+    'edit.input.name' => 'Name',
+    'edit.input.namePlaceholder' => 'Bitte geben Sie einen Namen ein.',
+    'edit.input.occupationName' => 'Nutzungs-Art',
+    'edit.input.occupationDesc' => '',
+    'edit.input.occupationValuePrivate' => 'Privat',
+    'edit.input.occupationValueOrganisation' => 'Als Organisator*in von Gruppen oder Vereinen von und für Menschen mit Behinderungen oder chron. Erkrankungen. Oder als Organisator*in von inklusiven Meetings',
+    'edit.input.nameOrganisation' => 'Name der Gruppe oder Organisation',
+    'edit.input.nameOrganisationPlaceholdder' => 'Bitte geben Sie den Namen Ihrer Organisation ein.',
+    'edit.button.cancel' => 'abbrechen',
+    'edit.button.save' => 'Persönliche Daten ändern',
+
+    'updateEmail.error.email.required' => 'Bitte geben Sie eine E-Mail-Adresse ein.',
+    'updateEmail.error.email.unique' => 'Diese E-Mail-Adresse ist bereits vergeben.',
+    'updateEmail.error.email.email' => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+    'updateEmail.error.emailconfirm.required' => 'Bitte bestätigen Sie die E-Mail-Adresse.',
+    'updateEmail.error.emailconfirm.same' => 'Die E-Mail-Adressen stimmen nicht überein.',
+    'updateEmail.success' => 'Die neue E-Mail-Adresse wurde gespeichert. Zur Bestätigung wurde eine PIN an diese E-Mail-Adresse versandt.',
+
+    'confirmEmail.error.pin.required' => 'Bitte geben Sie die PIN ein.',
+    'confirmEmail.error.pin.numeric' => 'Die PIN darf nur aus Zahlen bestehen.',
+    'confirmEmail.error.wrongPin' => 'Die PIN ist nicht korrekt.',
+    'confirmEmail.success' => 'Die E-Mail-Adresse wurde erfolgreich geändert.',
+    'confirmEmail.resendPin.success' => 'Die PIN wurde erneut an die neue E-Mail-Adresse versandt.',
+
+    'updatePassword.error.current_password.required' => 'Bitte geben Sie Ihr aktuelles Passwort ein.',
+    'updatePassword.error.current_password.current_password' => 'Das eingegebene Passwort ist nicht korrekt.',
+    'updatePassword.error.new_password.required' => 'Bitte geben Sie ein neues Passwort ein.',
+    'updatePassword.error.new_password.confirmed' => 'Die Passwörter stimmen nicht überein.',
+    'updatePassword.error.new_password_confirmation.required' => 'Bitte bestätigen Sie das neue Passwort.',
+    'updatePassword.success' => 'Sie haben Ihr Passwort erfolgreich geändert.',
+];
